@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1728">
+<meta name="description" content="Smart Travel Guard - hướng dẫn sơ cứu, chia sẻ vị trí và liên hệ khẩn cấp khi đi du lịch.">
+<title>Smart Travel Guard | An toàn trên mọi hành trình</title>
+<style>
+:root{--bg:#f3f7fb;--ink:#142338;--muted:#64748b;--navy:#0b1728;--blue:#1677ff;--teal:#13b8a6;--red:#e3344b;--line:#e2e8f0;--white:#fff;--shadow:0 14px 40px rgba(15,35,60,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.topbar{background:var(--navy);color:#fff;padding:15px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:850;font-size:1.1rem}.brandmark{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#1677ff,#13b8a6);font-size:1.35rem}.toprow{display:flex;align-items:center;justify-content:space-between;gap:15px}.toplinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}.toplinks a{text-decoration:none;color:#d8e4f4}.hero{padding:40px 0 24px;background:radial-gradient(circle at 85% 0,#d7f4f0 0,transparent 34%),linear-gradient(135deg,#eef5ff,#f7fbff)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#126b8c;background:#e0f8f5;padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:750}.hero h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.04em;margin:16px 0}.hero p{font-size:1.08rem;color:#52647a;max-width:650px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:13px;padding:12px 17px;font-weight:750;cursor:pointer;text-decoration:none;transition:transform .15s,filter .15s}.btn:hover{filter:brightness(.97);transform:translateY(-1px)}.btn-primary{background:var(--blue);color:#fff}.btn-light{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn-red{background:var(--red);color:#fff}.btn-teal{background:var(--teal);color:#052b2a}.sos-card{background:var(--navy);color:#fff;border-radius:25px;padding:24px;text-align:center;box-shadow:var(--shadow)}.sos-card .small{color:#b7c7dc;font-size:.9rem}.sos-button{width:min(230px,70vw);aspect-ratio:1;border-radius:50%;border:9px solid #ffffff25;background:radial-gradient(circle at 35% 25%,#ff6776,#d81f3b 68%);color:#fff;font-size:2.15rem;font-weight:900;box-shadow:0 0 0 8px #e3344b22,0 15px 35px #0005;cursor:pointer;margin:18px auto;display:grid;place-content:center;line-height:1.15}.sos-button span{font-size:.9rem;font-weight:650;margin-top:8px}.sos-note{font-size:.85rem;color:#d4dfed}.status{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;margin-top:16px;text-align:left;color:var(--ink);font-size:.9rem}.status-dot{width:10px;height:10px;flex:none;border-radius:50%;background:#f59e0b;margin-top:6px}.section{padding:30px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:17px}.section h2{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 5px;letter-spacing:-.025em}.sub{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;box-shadow:0 4px 16px #102a4305}.card h3{margin:8px 0}.card p{color:var(--muted);margin:6px 0 14px}.iconbox{width:46px;height:46px;border-radius:14px;background:#edf4ff;display:grid;place-items:center;font-size:1.45rem}.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.number-card{background:#fff;border:1px solid var(--line);padding:18px;border-radius:17px;text-decoration:none;display:flex;align-items:center;gap:13px}.number-card strong{display:block;font-size:1.2rem}.number-card span{color:var(--muted);font-size:.85rem}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:.92rem}.field input,.field select,.field textarea,.search{width:100%;border:1px solid #cfd9e6;border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink)}.field textarea{min-height:100px;resize:vertical}.field small{color:var(--muted)}.inline{display:flex;gap:10px;flex-wrap:wrap}.inline>*{flex:1;min-width:130px}.notice{border-left:4px solid #f59e0b;background:#fff8e7;padding:13px 15px;border-radius:10px;color:#704b0c;font-size:.92rem}.aid-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.aid{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden}.aid summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:17px;font-weight:800}.aid summary::-webkit-details-marker{display:none}.aid summary:after{content:"＋";margin-left:auto;color:var(--blue);font-size:1.2rem}.aid[open] summary:after{content:"−"}.aid-body{padding:0 18px 18px}.aid-body ol,.aid-body ul{padding-left:21px}.aid-body li{margin:8px 0}.danger{color:#b42335;font-weight:800}.muted{color:var(--muted)}.search{max-width:300px}.footer{background:var(--navy);color:#d5e0ef;padding:30px 0;margin-top:26px}.footer strong{color:#fff}.footer p{font-size:.9rem;max-width:900px}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#102238;color:#fff;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);max-width:calc(100% - 30px);z-index:100;display:none}.toast.show{display:block}.modal-backdrop{position:fixed;inset:0;background:#071321b8;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.modal-backdrop.show{display:flex}.modal{background:#fff;border-radius:22px;max-width:540px;width:100%;padding:23px;max-height:90vh;overflow:auto}.modal h2{margin-top:0}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.pill{display:inline-block;background:#edf4ff;color:#1557a6;padding:4px 9px;border-radius:999px;font-size:.8rem;font-weight:700}.maplink{display:inline-block;margin-top:8px;color:var(--blue);font-weight:700;overflow-wrap:anywhere}.hidden{display:none!important}
+@media(max-width:800px){.hero-grid,.two-col{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toplinks{display:none}.hero{padding-top:28px}.sos-card{max-width:520px;margin:auto;width:100%}}
+@media(max-width:560px){.wrap{width:min(100% - 22px,1120px)}.grid,.aid-grid,.numbers{grid-template-columns:1fr}.section{padding:23px 0}.card{padding:17px}.hero h1{font-size:2.35rem}.section-head{align-items:start;flex-direction:column}.search{max-width:none}.number-card{padding:14px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap toprow">
+    <div class="brand"><div class="brandmark">✚</div><div>SMART TRAVEL GUARD<div style="font-size:.75rem;font-weight:500;color:#bdcde1">An toàn trên mọi hành trình</div></div></div>
+    <nav class="toplinks" aria-label="Điều hướng"><a href="#sos">SOS</a><a href="#sosanh">Liên hệ khẩn cấp</a><a href="#so-cuu">Hướng dẫn sơ cứu</a><a href="#cai-dat">Cài đặt</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">🧭 BẠN ĐI DU LỊCH AN TOÀN HƠN</span>
+      <h1>Chuẩn bị sẵn sàng.<br>Ứng phó bình tĩnh.</h1>
+      <p>Truy cập nhanh hướng dẫn sơ cứu, lấy vị trí GPS và liên hệ người hỗ trợ khi có sự cố trên hành trình.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#sos">🆘 Mở SOS</a><a class="btn btn-light" href="#so-cuu">🩺 Xem hướng dẫn sơ cứu</a></div>
+      <div class="status"><span class="status-dot" id="gpsDot"></span><div><strong id="gpsStatus">Chưa lấy vị trí GPS</strong><div class="muted" id="gpsDetail">Bấm “Lấy vị trí hiện tại” và cho phép trình duyệt truy cập vị trí.</div></div></div>
+    </div>
+    <div class="sos-card" id="sos">
+      <div class="small">GẶP NGUY HIỂM? HÃY BẤM</div>
+      <button class="sos-button" id="sosBtn" aria-label="Mở SOS">SOS<span>GỌI HỖ TRỢ</span></button>
+      <div class="sos-note">SOS sẽ chuẩn bị thông tin và vị trí để bạn chọn cách liên hệ. Hãy xác nhận trước khi gửi tin nhắn.</div>
+      <div class="inline" style="margin-top:15px"><button class="btn btn-light" id="gpsBtn">📍 Lấy vị trí hiện tại</button><button class="btn btn-teal" id="shareBtn">↗ Chia sẻ vị trí</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sosanh">
+<div class="wrap">
+  <div class="section-head"><div><h2>Liên hệ khẩn cấp tại Việt Nam</h2><p class="sub">Chạm vào số để mở ứng dụng gọi điện trên thiết bị.</p></div></div>
+  <div class="numbers">
+    <a class="number-card" href="tel:115"><div class="iconbox">🚑</div><div><strong>115</strong><span>Cấp cứu y tế</span></div></a>
+    <a class="number-card" href="tel:114"><div class="iconbox">🚒</div><div><strong>114</strong><span>Cứu hỏa và cứu nạn, cứu hộ</span></div></a>
+    <a class="number-card" href="tel:113"><div class="iconbox">🚓</div><div><strong>113</strong><span>Công an</span></div></a>
+  </div>
+  <p class="muted" style="font-size:.87rem;margin-top:12px">Khi có nguy cơ tức thời, hãy gọi dịch vụ khẩn cấp phù hợp. Website không thay thế nhân viên y tế hoặc lực lượng cứu hộ.</p>
+</div>
+</section>
+
+<section class="section" id="cai-dat">
+<div class="wrap">
+  <div class="section-head"><div><h2>Thiết lập người hỗ trợ</h2><p class="sub">Lưu số điện thoại trên thiết bị này để thao tác nhanh hơn.</p></div><span class="pill">Lưu trên trình duyệt</span></div>
+  <div class="card">
+    <div class="two-col">
+      <div>
+        <div class="field"><label for="guideName">Tên hướng dẫn viên / người liên hệ</label><input id="guideName" placeholder="Ví dụ: Anh Nam - hướng dẫn viên"></div>
+        <div class="field"><label for="guidePhone">Số điện thoại hướng dẫn viên</label><input id="guidePhone" type="tel" inputmode="tel" placeholder="Ví dụ: 09xxxxxxxx"></div>
+      </div>
+      <div>
+        <div class="field"><label for="rescueName">Tên người phụ trách cứu hộ / đơn vị</label><input id="rescueName" placeholder="Ví dụ: Trực điều hành tour"></div>
+        <div class="field"><label for="rescuePhone">Số điện thoại cứu hộ / điều hành</label><input id="rescuePhone" type="tel" inputmode="tel" placeholder="Số điện thoại đã được đơn vị cung cấp"></div>
+      </div>
+    </div>
+    <div class="inline"><button class="btn btn-primary" id="saveSettings">Lưu cài đặt</button><button class="btn btn-light" id="clearSettings">Xóa số đã lưu</button></div>
+    <p class="muted" style="font-size:.85rem">Không nhập số nếu bạn chưa được người đó hoặc đơn vị cho phép. Số được lưu trong trình duyệt hiện tại, không tự gửi lên máy chủ.</p>
+  </div>
+</div>
+</section>
+
+<section class="section" id="bao-su-co">
+<div class="wrap">
+  <div class="section-head"><div><h2>Báo sự cố kèm vị trí</h2><p class="sub">Tạo tin nhắn ngắn để gửi cho người hỗ trợ.</p></div></div>
+  <div class="card">
+    <div class="two-col">
+      <div>
+        <div class="field"><label for="incidentType">Loại sự cố</label><select id="incidentType"><option>Tôi cần hỗ trợ khẩn cấp</option><option>Bị thương / chảy máu</option><option>Khó thở / bất tỉnh</option><option>Lạc đoàn / cần tìm đường</option><option>Nguy hiểm tại khu vực</option><option>Sự cố khác</option></select></div>
+        <div class="field"><label for="severity">Mức độ</label><select id="severity"><option>Khẩn cấp</option><option>Cần hỗ trợ sớm</option><option>Không khẩn cấp</option></select></div>
+      </div>
+      <div><div class="field"><label for="incidentNotes">Mô tả ngắn (không bắt buộc)</label><textarea id="incidentNotes" placeholder="Số người gặp sự cố, dấu hiệu, mốc dễ nhận biết..."></textarea></div></div>
+    </div>
+    <div class="inline"><button class="btn btn-red" id="prepareReport">Tạo tin nhắn báo sự cố</button><button class="btn btn-light" id="copyReport">Sao chép tin nhắn</button></div>
+    <div class="field"><label for="reportText">Nội dung tin nhắn</label><textarea id="reportText" placeholder="Tin nhắn sẽ xuất hiện ở đây..." readonly></textarea></div>
+    <div class="inline"><button class="btn btn-primary" id="smsGuide">📩 Nhắn hướng dẫn viên</button><button class="btn btn-primary" id="smsRescue">📩 Nhắn cứu hộ / điều hành</button></div>
+    <p class="muted" style="font-size:.85rem">Ứng dụng SMS sẽ mở để bạn kiểm tra và tự bấm gửi. Website không thể âm thầm gửi SMS hoặc tự động báo cho người khác.</p>
+  </div>
+</div>
+</section>
+
+<section class="section" id="so-cuu">
+<div class="wrap">
+  <div class="section-head"><div><h2>Hướng dẫn sơ cứu nhanh</h2><p class="sub">Tìm tình huống phù hợp. Gọi cấp cứu khi nghiêm trọng.</p></div><input class="search" id="aidSearch" placeholder="Tìm: bỏng, chảy máu, ngất..."></div>
+  <div class="notice"><strong>Quan trọng:</strong> Đảm bảo an toàn hiện trường trước khi tiếp cận. Nếu nạn nhân bất tỉnh, khó thở, chảy máu nhiều hoặc tình trạng xấu nhanh, gọi 115 và làm theo hướng dẫn của tổng đài. Không thực hiện thao tác vượt quá khả năng của bạn.</div>
+  <div class="aid-grid" id="aidGrid" style="margin-top:16px">
+    <details class="aid" data-terms="bất tỉnh ngừng thở hồi sinh tim phổi cpr ép tim"><summary><span class="iconbox">❤️</span> Bất tỉnh, không thở bình thường</summary><div class="aid-body"><p class="danger">Gọi 115 ngay và nhờ người lấy AED nếu có.</p><ol><li>Kiểm tra hiện trường an toàn, gọi lớn và lay nhẹ vai để kiểm tra đáp ứng.</li><li>Nếu không đáp ứng, gọi 115 hoặc nhờ người khác gọi. Mở loa ngoài.</li><li>Kiểm tra thở bình thường trong tối đa 10 giây. Thở ngáp cá không phải thở bình thường.</li><li>Nếu không thở bình thường, bắt đầu ép tim giữa ngực, mạnh và nhanh: 100–120 lần/phút, sâu khoảng 5–6 cm ở người lớn, để ngực nảy lại sau mỗi lần ép.</li><li>Nếu đã được huấn luyện, thực hiện chu kỳ 30 lần ép và 2 lần thổi ngạt. Nếu chưa, ép tim liên tục theo hướng dẫn tổng đài.</li><li>Dùng AED ngay khi có và làm theo hướng dẫn bằng giọng nói của máy.</li></ol><p>Không trì hoãn ép tim để tìm dụng cụ. Nếu nạn nhân bắt đầu thở bình thường, theo dõi liên tục và làm theo tổng đài.</p></div></details>
+    <details class="aid" data-terms="chảy máu vết thương cầm máu"><summary><span class="iconbox">🩸</span> Chảy máu nhiều</summary><div class="aid-body"><p class="danger">Chảy máu ồ ạt, vết thương sâu hoặc nạn nhân lả đi: gọi 115.</p><ol><li>Đeo găng nếu có và dùng gạc/vải sạch ép trực tiếp, chắc và liên tục lên vết thương.</li><li>Nếu máu thấm qua, đặt thêm lớp gạc lên trên; đừng liên tục nhấc ra để xem.</li><li>Nếu có dị vật cắm sâu, không rút ra; ép quanh dị vật.</li><li>Với chảy máu đe dọa tính mạng ở tay/chân, dùng garô thương mại nếu có và biết cách dùng; ghi lại thời điểm, không tự nới garô.</li><li>Giữ nạn nhân nằm yên, giữ ấm và theo dõi ý thức, nhịp thở cho đến khi trợ giúp đến.</li></ol></div></details>
+    <details class="aid" data-terms="bỏng nước sôi lửa hóa chất"><summary><span class="iconbox">🔥</span> Bỏng nhiệt</summary><div class="aid-body"><ol><li>Dừng tiếp xúc với nguồn nhiệt. Đảm bảo nơi đó an toàn.</li><li>Làm mát vùng bỏng dưới vòi nước mát chảy nhẹ khoảng 20 phút càng sớm càng tốt.</li><li>Tháo trang sức/quần áo gần vùng bỏng nếu không dính vào da.</li><li>Che lỏng bằng gạc vô khuẩn không dính hoặc màng bọc sạch đặt lên vùng bỏng; không quấn chặt.</li><li>Không chườm đá, không bôi kem đánh răng/dầu/mỡ, không chọc vỡ bóng nước, không bóc đồ dính vào da.</li></ol><p>Bỏng lớn, sâu, ở mặt/tay/bộ phận sinh dục, bỏng điện/hóa chất hoặc khó thở: gọi cấp cứu và đi khám ngay. Với bỏng hóa chất, tránh tiếp xúc hóa chất; phủi bột khô trước khi xả nhiều nước nếu an toàn và gọi cấp cứu.</p></div></details>
+    <details class="aid" data-terms="gãy xương chấn thương cổ cột sống"><summary><span class="iconbox">🦴</span> Nghi gãy xương / chấn thương cột sống</summary><div class="aid-body"><ol><li>Không di chuyển nạn nhân trừ khi có nguy hiểm tức thời như cháy hoặc sạt lở.</li><li>Gọi 115 nếu chấn thương nặng, biến dạng rõ, tê/yếu, chảy máu nhiều hoặc đau cổ/lưng sau tai nạn.</li><li>Giữ phần bị thương bất động ở tư thế tìm thấy; không cố nắn xương hoặc đẩy xương lòi vào trong.</li><li>Che vết thương bằng gạc sạch, cầm máu quanh vùng thương tích nếu có thể.</li><li>Giữ ấm, theo dõi thở và ý thức. Không cho ăn uống nếu có khả năng cần phẫu thuật.</li></ol></div></details>
+    <details class="aid" data-terms="đuối nước ngạt nước cứu hộ"><summary><span class="iconbox">🌊</span> Đuối nước</summary><div class="aid-body"><ol><li>Không lao xuống nước nếu không được huấn luyện. Gọi cứu hộ, dùng vật nổi/dây/gậy từ nơi an toàn.</li><li>Khi đưa được nạn nhân lên bờ an toàn, kiểm tra đáp ứng và thở bình thường.</li><li>Nếu không thở bình thường, gọi 115, nhờ lấy AED và bắt đầu hồi sức theo hướng dẫn tổng đài. Với đuối nước, thổi ngạt là quan trọng nếu bạn được huấn luyện và có thể thực hiện an toàn.</li><li>Nếu còn thở bình thường, giữ ấm, theo dõi liên tục và đi đánh giá y tế vì biến chứng hô hấp có thể xuất hiện sau đó.</li></ol><p>Không dốc ngược người để “xả nước”, không trì hoãn hồi sức để làm việc này.</p></div></details>
+    <details class="aid" data-terms="sốc nhiệt say nắng nóng"><summary><span class="iconbox">☀️</span> Nghi sốc nhiệt</summary><div class="aid-body"><p class="danger">Lú lẫn, co giật hoặc bất tỉnh sau khi nóng: cấp cứu ngay.</p><ol><li>Gọi 115 và đưa người bệnh ra chỗ mát.</li><li>Cởi bớt quần áo ngoài, làm mát nhanh bằng nước mát, khăn ướt và quạt; có thể chườm lạnh ở cổ, nách, bẹn.</li><li>Nếu đã được huấn luyện và điều kiện phù hợp, ngâm nước mát có thể làm mát nhanh nhưng cần bảo đảm đường thở.</li><li>Không cho uống nếu lú lẫn, co giật hoặc bất tỉnh. Không để người bệnh một mình.</li></ol></div></details>
+    <details class="aid" data-terms="dị ứng phản vệ khó thở sưng mặt"><summary><span class="iconbox">⚠️</span> Phản vệ / dị ứng nặng</summary><div class="aid-body"><p class="danger">Khó thở, sưng lưỡi/họng, choáng hoặc ngất sau tiếp xúc tác nhân: gọi 115.</p><ol><li>Nếu người bệnh có bút adrenaline tự tiêm được kê cho họ, hỗ trợ dùng ngay theo hướng dẫn trên bút/kế hoạch điều trị.</li><li>Cho nằm phẳng; nếu khó thở có thể ngồi tựa với chân duỗi. Không để đứng dậy hoặc đi lại.</li><li>Nếu không cải thiện sau khoảng 5 phút và có bút thứ hai theo kế hoạch, dùng bút thứ hai.</li><li>Nếu bất tỉnh và không thở bình thường, bắt đầu hồi sức. Thuốc kháng histamine không thay thế adrenaline trong phản vệ.</li></ol></div></details>
+    <details class="aid" data-terms="rắn cắn rắn độc nọc độc"><summary><span class="iconbox">🐍</span> Bị rắn cắn</summary><div class="aid-body"><ol><li>Đưa người bị cắn ra xa con rắn; không cố bắt hoặc giết rắn.</li><li>Gọi cấp cứu hoặc đưa đến cơ sở y tế khẩn cấp. Hạn chế tối đa vận động, giữ bình tĩnh.</li><li>Bất động chi bị cắn bằng nẹp lỏng nếu có; tháo nhẫn/vòng trước khi sưng.</li><li>Không rạch, hút nọc, chườm đá, đắp lá/thuốc, dùng điện hoặc garô chặt.</li><li>Nếu an toàn, ghi nhớ hình dáng/màu sắc từ xa hoặc chụp ảnh mà không tiếp cận con rắn.</li></ol></div></details>
+    <details class="aid" data-terms="co giật động kinh lên cơn"><summary><span class="iconbox">🧠</span> Co giật</summary><div class="aid-body"><ol><li>Dọn vật cứng/nguy hiểm xung quanh, kê vật mềm dưới đầu và canh thời gian cơn co giật.</li><li>Không ghì giữ, không nhét bất cứ thứ gì vào miệng, không cho uống thuốc/nước trong cơn.</li><li>Khi cơn dừng, kiểm tra thở. Nếu còn thở bình thường, đặt nằm nghiêng khi có thể làm an toàn và theo dõi.</li><li>Gọi cấp cứu nếu cơn kéo dài 5 phút trở lên, cơn lặp lại không tỉnh giữa các cơn, lần đầu co giật, bị thương, đang mang thai, xảy ra trong nước hoặc khó thở sau cơn.</li></ol></div></details>
+    <details class="aid" data-terms="khói ngạt khí độc khó thở"><summary><span class="iconbox">💨</span> Hít khói / khó thở</summary><div class="aid-body"><ol><li>Không đi vào khu vực có khói/khí độc nếu chưa được lực lượng chuyên môn bảo đảm an toàn.</li><li>Di chuyển đến không khí trong lành nếu có thể làm an toàn và gọi 114/115 tùy tình huống.</li><li>Nới lỏng quần áo chật, giúp người bệnh nghỉ ở tư thế dễ thở. Không cho ăn uống nếu khó thở nặng hoặc lơ mơ.</li><li>Nếu không thở bình thường, gọi 115 và bắt đầu hồi sức nếu hiện trường an toàn.</li></ol><p>Khó thở, khàn tiếng, bỏng quanh mặt hoặc lú lẫn sau hít khói cần đánh giá cấp cứu ngay, kể cả khi lúc đầu thấy đỡ.</p></div></details>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <div class="card">
+    <h2 style="font-size:1.35rem">Trước khi khởi hành</h2>
+    <div class="grid">
+      <div>☑️ Lưu số hướng dẫn viên và người thân.</div><div>☑️ Sạc pin điện thoại và bật định vị.</div><div>☑️ Chia sẻ lịch trình với người tin cậy.</div><div>☑️ Mang thuốc cá nhân và bộ sơ cứu.</div><div>☑️ Biết số khẩn cấp tại điểm đến.</div><div>☑️ Ở cùng nhóm tại khu vực rủi ro.</div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="footer"><div class="wrap"><strong>SMART TRAVEL GUARD</strong><p>Công cụ hỗ trợ thông tin an toàn du lịch. Hướng dẫn trên trang chỉ là thông tin sơ cứu cơ bản, không thay thế tư vấn y tế, huấn luyện sơ cứu hay chỉ dẫn của tổng đài khẩn cấp. Số điện thoại và quy trình khẩn cấp có thể khác nhau theo quốc gia.</p><p>Quyền riêng tư: vị trí chỉ được yêu cầu khi bạn bấm nút. Không có máy chủ trong phiên bản tĩnh này; tin nhắn phải do bạn xác nhận gửi.</p></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal-backdrop" id="sosModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <h2 id="modalTitle">🆘 Bạn cần hỗ trợ?</h2>
+    <p>Hãy chọn hành động. Nếu nguy hiểm đến tính mạng, gọi cấp cứu ngay.</p>
+    <div class="notice">Nếu bạn đang ở Việt Nam: cấp cứu y tế <strong>115</strong>, cứu hỏa/cứu nạn <strong>114</strong>, công an <strong>113</strong>.</div>
+    <div class="modal-actions"><a class="btn btn-red" href="tel:115">Gọi 115</a><button class="btn btn-light" id="modalGps">📍 Lấy GPS</button><button class="btn btn-light" id="modalShare">Chia sẻ vị trí</button></div>
+    <div class="modal-actions"><button class="btn btn-primary" id="modalSmsGuide">Nhắn hướng dẫn viên</button><button class="btn btn-primary" id="modalSmsRescue">Nhắn cứu hộ</button></div>
+    <div class="modal-actions"><button class="btn btn-light" id="closeModal">Đóng</button></div>
+  </div>
+</div>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+let currentPosition = null;
+const defaultMessage = "Tôi cần hỗ trợ. Vui lòng liên hệ lại.";
+function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("show"),3500)}
+function cleanPhone(phone){return (phone||"").trim().replace(/[^\d+]/g,"")}
+function getSettings(){return {guideName:localStorage.getItem("stg_guideName")||"",guidePhone:localStorage.getItem("stg_guidePhone")||"",rescueName:localStorage.getItem("stg_rescueName")||"",rescuePhone:localStorage.getItem("stg_rescuePhone")||""}}
+function loadSettings(){const s=getSettings();$("guideName").value=s.guideName;$("guidePhone").value=s.guidePhone;$("rescueName").value=s.rescueName;$("rescuePhone").value=s.rescuePhone}
+function saveSettings(){localStorage.setItem("stg_guideName",$("guideName").value.trim());localStorage.setItem("stg_guidePhone",$("guidePhone").value.trim());localStorage.setItem("stg_rescueName",$("rescueName").value.trim());localStorage.setItem("stg_rescuePhone",$("rescuePhone").value.trim());toast("Đã lưu cài đặt trên trình duyệt này.")}
+function setGpsStatus(title,detail,ok=false){$("gpsStatus").textContent=title;$("gpsDetail").textContent=detail;$("gpsDot").style.background=ok?"#13b8a6":"#f59e0b"}
+function coordsText(){if(!currentPosition)return "Chưa lấy được vị trí GPS.";const p=currentPosition;return `Vĩ độ: ${p.coords.latitude.toFixed(6)}, kinh độ: ${p.coords.longitude.toFixed(6)} (sai số khoảng ${Math.round(p.coords.accuracy)} m).`}
+function mapUrl(){if(!currentPosition)return "";return `https://www.google.com/maps?q=${currentPosition.coords.latitude},${currentPosition.coords.longitude}`}
+function getGps(){if(!("geolocation" in navigator)){setGpsStatus("Thiết bị không hỗ trợ GPS","Bạn có thể nhập địa chỉ/mốc gần nhất vào phần mô tả.");toast("Trình duyệt không hỗ trợ định vị.");return}
+ setGpsStatus("Đang lấy vị trí…","Hãy cho phép truy cập vị trí nếu trình duyệt hỏi.");
+ navigator.geolocation.getCurrentPosition(pos=>{currentPosition=pos;setGpsStatus("Đã lấy vị trí GPS",coordsText(),true);$("reportText").value=buildMessage();toast("Đã lấy vị trí. Sai số phụ thuộc tín hiệu GPS.");},err=>{let msg="Không lấy được vị trí.";if(err.code===1)msg="Bạn chưa cấp quyền vị trí. Hãy bật Location trong cài đặt trình duyệt.";if(err.code===2)msg="Không xác định được vị trí. Hãy bật GPS và thử lại.";if(err.code===3)msg="Hết thời gian lấy vị trí. Hãy thử lại.";setGpsStatus("Chưa lấy được vị trí",msg);toast(msg);},{enableHighAccuracy:true,timeout:15000,maximumAge:10000})}
+function buildMessage(){const type=$("incidentType").value;const severity=$("severity").value;const notes=$("incidentNotes").value.trim();let msg=`[SMART TRAVEL GUARD] ${severity.toUpperCase()}\nSự cố: ${type}\n${coordsText()}`;if(currentPosition)msg+=`\nBản đồ: ${mapUrl()}`;if(notes)msg+=`\nMô tả: ${notes}`;msg+="\nVui lòng liên hệ/hỗ trợ tôi.";return msg}
+function prepareReport(){const msg=buildMessage();$("reportText").value=msg;toast("Đã tạo tin nhắn báo sự cố.");return msg}
+function openSms(phone){const msg=prepareReport();const target=cleanPhone(phone);if(!target){toast("Chưa lưu số điện thoại người nhận. Vào mục Thiết lập người hỗ trợ để thêm số.");$("cai-dat").scrollIntoView({behavior:"smooth"});return}window.location.href=`sms:${target}?body=${encodeURIComponent(msg)}`}
+async function copyText(text){try{await navigator.clipboard.writeText(text);toast("Đã sao chép nội dung.");}catch(e){$("reportText").value=text;$("reportText").focus();$("reportText").select();toast("Trình duyệt chặn sao chép tự động. Hãy nhấn Ctrl+C hoặc chọn Sao chép.");}}
+async function shareLocation(){if(!currentPosition){getGps();toast("Đang lấy GPS. Bấm Chia sẻ vị trí lần nữa sau khi có kết quả.");return}const url=mapUrl();const text=`Vị trí của tôi: ${url}\n${coordsText()}`;if(navigator.share){try{await navigator.share({title:"Vị trí cần hỗ trợ",text,url});}catch(e){if(e.name!=="AbortError")copyText(text)}}else{copyText(text)}}
+function openModal(){$("sosModal").classList.add("show")}
+function closeModal(){$("sosModal").classList.remove("show")}
+$("saveSettings").addEventListener("click",saveSettings);
+$("clearSettings").addEventListener("click",()=>{if(confirm("Xóa các số điện thoại đã lưu trên trình duyệt này?")){["guideName","guidePhone","rescueName","rescuePhone"].forEach(k=>localStorage.removeItem("stg_"+k));loadSettings();toast("Đã xóa các số đã lưu.")}});
+$("gpsBtn").addEventListener("click",getGps);$("modalGps").addEventListener("click",getGps);
+$("shareBtn").addEventListener("click",shareLocation);$("modalShare").addEventListener("click",shareLocation);
+$("sosBtn").addEventListener("click",openModal);$("closeModal").addEventListener("click",closeModal);
+$("prepareReport").addEventListener("click",prepareReport);
+$("copyReport").addEventListener("click",()=>copyText($("reportText").value||prepareReport()));
+$("smsGuide").addEventListener("click",()=>openSms(getSettings().guidePhone));
+$("smsRescue").addEventListener("click",()=>openSms(getSettings().rescuePhone));
+$("modalSmsGuide").addEventListener("click",()=>openSms(getSettings().guidePhone));
+$("modalSmsRescue").addEventListener("click",()=>openSms(getSettings().rescuePhone));
+["incidentType","severity","incidentNotes"].forEach(id=>$(id).addEventListener("change",()=>{$("reportText").value=buildMessage()}));
+$("incidentNotes").addEventListener("input",()=>{$("reportText").value=buildMessage()});
+$("aidSearch").addEventListener("input",()=>{const q=$("aidSearch").value.toLocaleLowerCase("vi").trim();document.querySelectorAll(".aid").forEach(card=>{const hay=(card.innerText+" "+card.dataset.terms).toLocaleLowerCase("vi");card.classList.toggle("hidden",!!q&&!hay.includes(q));if(q&&hay.includes(q))card.open=true;})});
+$("sosModal").addEventListener("click",e=>{if(e.target===$("sosModal"))closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+loadSettings();
+</script>
+</body>
+</html>
