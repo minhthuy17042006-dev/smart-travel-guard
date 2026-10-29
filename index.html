@@ -1,180 +1,1744 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b1728">
-<meta name="description" content="Smart Travel Guard - hướng dẫn sơ cứu, chia sẻ vị trí và liên hệ khẩn cấp khi đi du lịch.">
-<title>Smart Travel Guard | An toàn trên mọi hành trình</title>
-<style>
-:root{--bg:#f3f7fb;--ink:#142338;--muted:#64748b;--navy:#0b1728;--blue:#1677ff;--teal:#13b8a6;--red:#e3344b;--line:#e2e8f0;--white:#fff;--shadow:0 14px 40px rgba(15,35,60,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.topbar{background:var(--navy);color:#fff;padding:15px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:850;font-size:1.1rem}.brandmark{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#1677ff,#13b8a6);font-size:1.35rem}.toprow{display:flex;align-items:center;justify-content:space-between;gap:15px}.toplinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}.toplinks a{text-decoration:none;color:#d8e4f4}.hero{padding:40px 0 24px;background:radial-gradient(circle at 85% 0,#d7f4f0 0,transparent 34%),linear-gradient(135deg,#eef5ff,#f7fbff)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#126b8c;background:#e0f8f5;padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:750}.hero h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.04em;margin:16px 0}.hero p{font-size:1.08rem;color:#52647a;max-width:650px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:13px;padding:12px 17px;font-weight:750;cursor:pointer;text-decoration:none;transition:transform .15s,filter .15s}.btn:hover{filter:brightness(.97);transform:translateY(-1px)}.btn-primary{background:var(--blue);color:#fff}.btn-light{background:#fff;border:1px solid var(--line);color:var(--ink)}.btn-red{background:var(--red);color:#fff}.btn-teal{background:var(--teal);color:#052b2a}.sos-card{background:var(--navy);color:#fff;border-radius:25px;padding:24px;text-align:center;box-shadow:var(--shadow)}.sos-card .small{color:#b7c7dc;font-size:.9rem}.sos-button{width:min(230px,70vw);aspect-ratio:1;border-radius:50%;border:9px solid #ffffff25;background:radial-gradient(circle at 35% 25%,#ff6776,#d81f3b 68%);color:#fff;font-size:2.15rem;font-weight:900;box-shadow:0 0 0 8px #e3344b22,0 15px 35px #0005;cursor:pointer;margin:18px auto;display:grid;place-content:center;line-height:1.15}.sos-button span{font-size:.9rem;font-weight:650;margin-top:8px}.sos-note{font-size:.85rem;color:#d4dfed}.status{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;margin-top:16px;text-align:left;color:var(--ink);font-size:.9rem}.status-dot{width:10px;height:10px;flex:none;border-radius:50%;background:#f59e0b;margin-top:6px}.section{padding:30px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:17px}.section h2{font-size:clamp(1.5rem,3vw,2rem);margin:0 0 5px;letter-spacing:-.025em}.sub{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;box-shadow:0 4px 16px #102a4305}.card h3{margin:8px 0}.card p{color:var(--muted);margin:6px 0 14px}.iconbox{width:46px;height:46px;border-radius:14px;background:#edf4ff;display:grid;place-items:center;font-size:1.45rem}.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.number-card{background:#fff;border:1px solid var(--line);padding:18px;border-radius:17px;text-decoration:none;display:flex;align-items:center;gap:13px}.number-card strong{display:block;font-size:1.2rem}.number-card span{color:var(--muted);font-size:.85rem}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:.92rem}.field input,.field select,.field textarea,.search{width:100%;border:1px solid #cfd9e6;border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink)}.field textarea{min-height:100px;resize:vertical}.field small{color:var(--muted)}.inline{display:flex;gap:10px;flex-wrap:wrap}.inline>*{flex:1;min-width:130px}.notice{border-left:4px solid #f59e0b;background:#fff8e7;padding:13px 15px;border-radius:10px;color:#704b0c;font-size:.92rem}.aid-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.aid{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden}.aid summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:17px;font-weight:800}.aid summary::-webkit-details-marker{display:none}.aid summary:after{content:"＋";margin-left:auto;color:var(--blue);font-size:1.2rem}.aid[open] summary:after{content:"−"}.aid-body{padding:0 18px 18px}.aid-body ol,.aid-body ul{padding-left:21px}.aid-body li{margin:8px 0}.danger{color:#b42335;font-weight:800}.muted{color:var(--muted)}.search{max-width:300px}.footer{background:var(--navy);color:#d5e0ef;padding:30px 0;margin-top:26px}.footer strong{color:#fff}.footer p{font-size:.9rem;max-width:900px}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#102238;color:#fff;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);max-width:calc(100% - 30px);z-index:100;display:none}.toast.show{display:block}.modal-backdrop{position:fixed;inset:0;background:#071321b8;z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.modal-backdrop.show{display:flex}.modal{background:#fff;border-radius:22px;max-width:540px;width:100%;padding:23px;max-height:90vh;overflow:auto}.modal h2{margin-top:0}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.pill{display:inline-block;background:#edf4ff;color:#1557a6;padding:4px 9px;border-radius:999px;font-size:.8rem;font-weight:700}.maplink{display:inline-block;margin-top:8px;color:var(--blue);font-weight:700;overflow-wrap:anywhere}.hidden{display:none!important}
-@media(max-width:800px){.hero-grid,.two-col{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toplinks{display:none}.hero{padding-top:28px}.sos-card{max-width:520px;margin:auto;width:100%}}
-@media(max-width:560px){.wrap{width:min(100% - 22px,1120px)}.grid,.aid-grid,.numbers{grid-template-columns:1fr}.section{padding:23px 0}.card{padding:17px}.hero h1{font-size:2.35rem}.section-head{align-items:start;flex-direction:column}.search{max-width:none}.number-card{padding:14px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b20">
+  <meta name="description" content="Smart Travel Guard - Future Rescue. Trợ lý an toàn du lịch với SOS, GPS, chia sẻ vị trí và hướng dẫn sơ cứu.">
+  <title>Smart Travel Guard | Future Rescue</title>
+
+  <style>
+    :root {
+      --bg: #061519;
+      --bg2: #0a2429;
+      --card: rgba(13, 43, 48, .84);
+      --text: #e9ffff;
+      --muted: #9ababc;
+      --accent: #35f5d0;
+      --accent2: #00bda9;
+      --border: rgba(53, 245, 208, .19);
+      --shadow: 0 0 30px rgba(0, 255, 210, .08);
+      --danger: #ff4667;
+      --warning: #ffc857;
+    }
+
+    body.light {
+      --bg: #effbfa;
+      --bg2: #dff7f4;
+      --card: rgba(255, 255, 255, .92);
+      --text: #10363a;
+      --muted: #557578;
+      --accent: #009e8a;
+      --accent2: #007b70;
+      --border: rgba(0, 158, 138, .2);
+      --shadow: 0 8px 28px rgba(0, 100, 90, .09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 10% 0%, rgba(0, 226, 195, .12), transparent 42%),
+        radial-gradient(ellipse at 100% 40%, rgba(0, 150, 180, .10), transparent 40%),
+        var(--bg);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      transition: background .25s, color .25s;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:focus-visible, input:focus-visible,
+    select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand-icon {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--accent), #087e8b);
+      color: #031c20;
+      font-size: 24px;
+      box-shadow: 0 0 22px rgba(53, 245, 208, .25);
+    }
+
+    .brand-name {
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: .4px;
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    select, input, textarea {
+      width: 100%;
+      color: var(--text);
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    select {
+      width: auto;
+      max-width: 160px;
+    }
+
+    option {
+      color: #123;
+      background: #fff;
+    }
+
+    .icon-button {
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--card);
+      font-size: 19px;
+    }
+
+    main {
+      padding: 30px 0 55px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 12px 28px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      color: var(--accent);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(32px, 7vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .gradient-text {
+      color: var(--accent);
+      text-shadow: 0 0 28px rgba(53, 245, 208, .17);
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .section-label {
+      margin: 28px 0 14px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-radius: 15px;
+      background: rgba(53, 245, 208, .09);
+      border: 1px solid var(--border);
+    }
+
+    .sos-card {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 28px 22px;
+      border-color: rgba(255, 70, 103, .35);
+      background:
+        radial-gradient(ellipse at center, rgba(255, 70, 103, .08), transparent 70%),
+        var(--card);
+    }
+
+    .sos-card .card-icon {
+      margin: 0 auto 14px;
+      background: rgba(255, 70, 103, .1);
+      border-color: rgba(255, 70, 103, .25);
+    }
+
+    .sos-button {
+      width: min(270px, 100%);
+      min-height: 74px;
+      margin: 20px auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: white;
+      background: linear-gradient(135deg, #ff4263, #c91042);
+      border: 0;
+      border-radius: 20px;
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      box-shadow: 0 8px 30px rgba(255, 44, 88, .23);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .sos-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(255, 44, 88, .4);
+    }
+
+    .sos-note {
+      max-width: 480px;
+      margin: auto !important;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 43px;
+      padding: 10px 15px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg2);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 750;
+      text-decoration: none;
+      transition: .2s;
+    }
+
+    .button:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      color: #03251f;
+      background: var(--accent);
+      border-color: transparent;
+    }
+
+    .button.danger {
+      color: white;
+      background: #d72d4c;
+      border-color: transparent;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 17px;
+    }
+
+    .button-row .button {
+      flex: 1;
+    }
+
+    .field {
+      margin-top: 15px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 12px;
+      font-weight: 750;
+      color: var(--muted);
+    }
+
+    .gps-value {
+      overflow-wrap: anywhere;
+      padding: 13px;
+      margin-top: 15px;
+      border-radius: 12px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .empty {
+      color: var(--muted);
+    }
+
+    .emergency-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg2);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 15px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .first-aid-content {
+      padding: 0 15px 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .first-aid-content ol {
+      padding-left: 20px;
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 14px;
+      border: 1px solid rgba(255, 200, 87, .3);
+      border-radius: 13px;
+      background: rgba(255, 200, 87, .06);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      z-index: 100;
+      width: max-content;
+      max-width: 90%;
+      padding: 13px 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text);
+      background: var(--card);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .18);
+      transform: translate(-50%, 25px);
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s;
+      font-size: 13px;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .small {
+      font-size: 11px !important;
+    }
+
+    @media (max-width: 650px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sos-card {
+        grid-column: auto;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .card {
+        padding: 19px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-sub {
+        font-size: 9px;
+      }
+
+      .topbar {
+        gap: 10px;
+      }
+
+      select {
+        max-width: 135px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="topbar">
-  <div class="wrap toprow">
-    <div class="brand"><div class="brandmark">✚</div><div>SMART TRAVEL GUARD<div style="font-size:.75rem;font-weight:500;color:#bdcde1">An toàn trên mọi hành trình</div></div></div>
-    <nav class="toplinks" aria-label="Điều hướng"><a href="#sos">SOS</a><a href="#sosanh">Liên hệ khẩn cấp</a><a href="#so-cuu">Hướng dẫn sơ cứu</a><a href="#cai-dat">Cài đặt</a></nav>
-  </div>
-</header>
-
-<main>
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">🧭 BẠN ĐI DU LỊCH AN TOÀN HƠN</span>
-      <h1>Chuẩn bị sẵn sàng.<br>Ứng phó bình tĩnh.</h1>
-      <p>Truy cập nhanh hướng dẫn sơ cứu, lấy vị trí GPS và liên hệ người hỗ trợ khi có sự cố trên hành trình.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="#sos">🆘 Mở SOS</a><a class="btn btn-light" href="#so-cuu">🩺 Xem hướng dẫn sơ cứu</a></div>
-      <div class="status"><span class="status-dot" id="gpsDot"></span><div><strong id="gpsStatus">Chưa lấy vị trí GPS</strong><div class="muted" id="gpsDetail">Bấm “Lấy vị trí hiện tại” và cho phép trình duyệt truy cập vị trí.</div></div></div>
-    </div>
-    <div class="sos-card" id="sos">
-      <div class="small">GẶP NGUY HIỂM? HÃY BẤM</div>
-      <button class="sos-button" id="sosBtn" aria-label="Mở SOS">SOS<span>GỌI HỖ TRỢ</span></button>
-      <div class="sos-note">SOS sẽ chuẩn bị thông tin và vị trí để bạn chọn cách liên hệ. Hãy xác nhận trước khi gửi tin nhắn.</div>
-      <div class="inline" style="margin-top:15px"><button class="btn btn-light" id="gpsBtn">📍 Lấy vị trí hiện tại</button><button class="btn btn-teal" id="shareBtn">↗ Chia sẻ vị trí</button></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="sosanh">
-<div class="wrap">
-  <div class="section-head"><div><h2>Liên hệ khẩn cấp tại Việt Nam</h2><p class="sub">Chạm vào số để mở ứng dụng gọi điện trên thiết bị.</p></div></div>
-  <div class="numbers">
-    <a class="number-card" href="tel:115"><div class="iconbox">🚑</div><div><strong>115</strong><span>Cấp cứu y tế</span></div></a>
-    <a class="number-card" href="tel:114"><div class="iconbox">🚒</div><div><strong>114</strong><span>Cứu hỏa và cứu nạn, cứu hộ</span></div></a>
-    <a class="number-card" href="tel:113"><div class="iconbox">🚓</div><div><strong>113</strong><span>Công an</span></div></a>
-  </div>
-  <p class="muted" style="font-size:.87rem;margin-top:12px">Khi có nguy cơ tức thời, hãy gọi dịch vụ khẩn cấp phù hợp. Website không thay thế nhân viên y tế hoặc lực lượng cứu hộ.</p>
-</div>
-</section>
-
-<section class="section" id="cai-dat">
-<div class="wrap">
-  <div class="section-head"><div><h2>Thiết lập người hỗ trợ</h2><p class="sub">Lưu số điện thoại trên thiết bị này để thao tác nhanh hơn.</p></div><span class="pill">Lưu trên trình duyệt</span></div>
-  <div class="card">
-    <div class="two-col">
-      <div>
-        <div class="field"><label for="guideName">Tên hướng dẫn viên / người liên hệ</label><input id="guideName" placeholder="Ví dụ: Anh Nam - hướng dẫn viên"></div>
-        <div class="field"><label for="guidePhone">Số điện thoại hướng dẫn viên</label><input id="guidePhone" type="tel" inputmode="tel" placeholder="Ví dụ: 09xxxxxxxx"></div>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">✚</div>
+        <div>
+          <div class="brand-name">SMART TRAVEL GUARD</div>
+          <div class="brand-sub">FUTURE RESCUE SYSTEM</div>
+        </div>
       </div>
-      <div>
-        <div class="field"><label for="rescueName">Tên người phụ trách cứu hộ / đơn vị</label><input id="rescueName" placeholder="Ví dụ: Trực điều hành tour"></div>
-        <div class="field"><label for="rescuePhone">Số điện thoại cứu hộ / điều hành</label><input id="rescuePhone" type="tel" inputmode="tel" placeholder="Số điện thoại đã được đơn vị cung cấp"></div>
+
+      <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+          <option value="vi">🇻🇳 Tiếng Việt</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="zh">🇨🇳 中文</option>
+          <option value="ja">🇯🇵 日本語</option>
+          <option value="ko">🇰🇷 한국어</option>
+          <option value="fr">🇫🇷 Français</option>
+          <option value="es">🇪🇸 Español</option>
+          <option value="th">🇹🇭 ไทย</option>
+        </select>
+        <button class="icon-button" id="themeButton"
+          type="button" aria-label="Toggle theme" title="Toggle theme">☀️</button>
       </div>
     </div>
-    <div class="inline"><button class="btn btn-primary" id="saveSettings">Lưu cài đặt</button><button class="btn btn-light" id="clearSettings">Xóa số đã lưu</button></div>
-    <p class="muted" style="font-size:.85rem">Không nhập số nếu bạn chưa được người đó hoặc đơn vị cho phép. Số được lưu trong trình duyệt hiện tại, không tự gửi lên máy chủ.</p>
-  </div>
-</div>
-</section>
+  </header>
 
-<section class="section" id="bao-su-co">
-<div class="wrap">
-  <div class="section-head"><div><h2>Báo sự cố kèm vị trí</h2><p class="sub">Tạo tin nhắn ngắn để gửi cho người hỗ trợ.</p></div></div>
-  <div class="card">
-    <div class="two-col">
-      <div>
-        <div class="field"><label for="incidentType">Loại sự cố</label><select id="incidentType"><option>Tôi cần hỗ trợ khẩn cấp</option><option>Bị thương / chảy máu</option><option>Khó thở / bất tỉnh</option><option>Lạc đoàn / cần tìm đường</option><option>Nguy hiểm tại khu vực</option><option>Sự cố khác</option></select></div>
-        <div class="field"><label for="severity">Mức độ</label><select id="severity"><option>Khẩn cấp</option><option>Cần hỗ trợ sớm</option><option>Không khẩn cấp</option></select></div>
+  <main class="container">
+    <section class="hero">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span data-i18n="systemReady">SAFETY SYSTEM READY</span>
       </div>
-      <div><div class="field"><label for="incidentNotes">Mô tả ngắn (không bắt buộc)</label><textarea id="incidentNotes" placeholder="Số người gặp sự cố, dấu hiệu, mốc dễ nhận biết..."></textarea></div></div>
+
+      <h1>
+        <span data-i18n="heroLine1">Travel smarter.</span><br>
+        <span class="gradient-text" data-i18n="heroLine2">Travel safer.</span>
+      </h1>
+
+      <p data-i18n="heroDesc">
+        Trợ lý an toàn du lịch của bạn. Kết nối trợ giúp, chia sẻ vị trí
+        và tiếp cận hướng dẫn an toàn khi cần.
+      </p>
+    </section>
+
+    <div class="section-label" data-i18n="emergencyCenter">
+      TRUNG TÂM KHẨN CẤP
     </div>
-    <div class="inline"><button class="btn btn-red" id="prepareReport">Tạo tin nhắn báo sự cố</button><button class="btn btn-light" id="copyReport">Sao chép tin nhắn</button></div>
-    <div class="field"><label for="reportText">Nội dung tin nhắn</label><textarea id="reportText" placeholder="Tin nhắn sẽ xuất hiện ở đây..." readonly></textarea></div>
-    <div class="inline"><button class="btn btn-primary" id="smsGuide">📩 Nhắn hướng dẫn viên</button><button class="btn btn-primary" id="smsRescue">📩 Nhắn cứu hộ / điều hành</button></div>
-    <p class="muted" style="font-size:.85rem">Ứng dụng SMS sẽ mở để bạn kiểm tra và tự bấm gửi. Website không thể âm thầm gửi SMS hoặc tự động báo cho người khác.</p>
-  </div>
-</div>
-</section>
 
-<section class="section" id="so-cuu">
-<div class="wrap">
-  <div class="section-head"><div><h2>Hướng dẫn sơ cứu nhanh</h2><p class="sub">Tìm tình huống phù hợp. Gọi cấp cứu khi nghiêm trọng.</p></div><input class="search" id="aidSearch" placeholder="Tìm: bỏng, chảy máu, ngất..."></div>
-  <div class="notice"><strong>Quan trọng:</strong> Đảm bảo an toàn hiện trường trước khi tiếp cận. Nếu nạn nhân bất tỉnh, khó thở, chảy máu nhiều hoặc tình trạng xấu nhanh, gọi 115 và làm theo hướng dẫn của tổng đài. Không thực hiện thao tác vượt quá khả năng của bạn.</div>
-  <div class="aid-grid" id="aidGrid" style="margin-top:16px">
-    <details class="aid" data-terms="bất tỉnh ngừng thở hồi sinh tim phổi cpr ép tim"><summary><span class="iconbox">❤️</span> Bất tỉnh, không thở bình thường</summary><div class="aid-body"><p class="danger">Gọi 115 ngay và nhờ người lấy AED nếu có.</p><ol><li>Kiểm tra hiện trường an toàn, gọi lớn và lay nhẹ vai để kiểm tra đáp ứng.</li><li>Nếu không đáp ứng, gọi 115 hoặc nhờ người khác gọi. Mở loa ngoài.</li><li>Kiểm tra thở bình thường trong tối đa 10 giây. Thở ngáp cá không phải thở bình thường.</li><li>Nếu không thở bình thường, bắt đầu ép tim giữa ngực, mạnh và nhanh: 100–120 lần/phút, sâu khoảng 5–6 cm ở người lớn, để ngực nảy lại sau mỗi lần ép.</li><li>Nếu đã được huấn luyện, thực hiện chu kỳ 30 lần ép và 2 lần thổi ngạt. Nếu chưa, ép tim liên tục theo hướng dẫn tổng đài.</li><li>Dùng AED ngay khi có và làm theo hướng dẫn bằng giọng nói của máy.</li></ol><p>Không trì hoãn ép tim để tìm dụng cụ. Nếu nạn nhân bắt đầu thở bình thường, theo dõi liên tục và làm theo tổng đài.</p></div></details>
-    <details class="aid" data-terms="chảy máu vết thương cầm máu"><summary><span class="iconbox">🩸</span> Chảy máu nhiều</summary><div class="aid-body"><p class="danger">Chảy máu ồ ạt, vết thương sâu hoặc nạn nhân lả đi: gọi 115.</p><ol><li>Đeo găng nếu có và dùng gạc/vải sạch ép trực tiếp, chắc và liên tục lên vết thương.</li><li>Nếu máu thấm qua, đặt thêm lớp gạc lên trên; đừng liên tục nhấc ra để xem.</li><li>Nếu có dị vật cắm sâu, không rút ra; ép quanh dị vật.</li><li>Với chảy máu đe dọa tính mạng ở tay/chân, dùng garô thương mại nếu có và biết cách dùng; ghi lại thời điểm, không tự nới garô.</li><li>Giữ nạn nhân nằm yên, giữ ấm và theo dõi ý thức, nhịp thở cho đến khi trợ giúp đến.</li></ol></div></details>
-    <details class="aid" data-terms="bỏng nước sôi lửa hóa chất"><summary><span class="iconbox">🔥</span> Bỏng nhiệt</summary><div class="aid-body"><ol><li>Dừng tiếp xúc với nguồn nhiệt. Đảm bảo nơi đó an toàn.</li><li>Làm mát vùng bỏng dưới vòi nước mát chảy nhẹ khoảng 20 phút càng sớm càng tốt.</li><li>Tháo trang sức/quần áo gần vùng bỏng nếu không dính vào da.</li><li>Che lỏng bằng gạc vô khuẩn không dính hoặc màng bọc sạch đặt lên vùng bỏng; không quấn chặt.</li><li>Không chườm đá, không bôi kem đánh răng/dầu/mỡ, không chọc vỡ bóng nước, không bóc đồ dính vào da.</li></ol><p>Bỏng lớn, sâu, ở mặt/tay/bộ phận sinh dục, bỏng điện/hóa chất hoặc khó thở: gọi cấp cứu và đi khám ngay. Với bỏng hóa chất, tránh tiếp xúc hóa chất; phủi bột khô trước khi xả nhiều nước nếu an toàn và gọi cấp cứu.</p></div></details>
-    <details class="aid" data-terms="gãy xương chấn thương cổ cột sống"><summary><span class="iconbox">🦴</span> Nghi gãy xương / chấn thương cột sống</summary><div class="aid-body"><ol><li>Không di chuyển nạn nhân trừ khi có nguy hiểm tức thời như cháy hoặc sạt lở.</li><li>Gọi 115 nếu chấn thương nặng, biến dạng rõ, tê/yếu, chảy máu nhiều hoặc đau cổ/lưng sau tai nạn.</li><li>Giữ phần bị thương bất động ở tư thế tìm thấy; không cố nắn xương hoặc đẩy xương lòi vào trong.</li><li>Che vết thương bằng gạc sạch, cầm máu quanh vùng thương tích nếu có thể.</li><li>Giữ ấm, theo dõi thở và ý thức. Không cho ăn uống nếu có khả năng cần phẫu thuật.</li></ol></div></details>
-    <details class="aid" data-terms="đuối nước ngạt nước cứu hộ"><summary><span class="iconbox">🌊</span> Đuối nước</summary><div class="aid-body"><ol><li>Không lao xuống nước nếu không được huấn luyện. Gọi cứu hộ, dùng vật nổi/dây/gậy từ nơi an toàn.</li><li>Khi đưa được nạn nhân lên bờ an toàn, kiểm tra đáp ứng và thở bình thường.</li><li>Nếu không thở bình thường, gọi 115, nhờ lấy AED và bắt đầu hồi sức theo hướng dẫn tổng đài. Với đuối nước, thổi ngạt là quan trọng nếu bạn được huấn luyện và có thể thực hiện an toàn.</li><li>Nếu còn thở bình thường, giữ ấm, theo dõi liên tục và đi đánh giá y tế vì biến chứng hô hấp có thể xuất hiện sau đó.</li></ol><p>Không dốc ngược người để “xả nước”, không trì hoãn hồi sức để làm việc này.</p></div></details>
-    <details class="aid" data-terms="sốc nhiệt say nắng nóng"><summary><span class="iconbox">☀️</span> Nghi sốc nhiệt</summary><div class="aid-body"><p class="danger">Lú lẫn, co giật hoặc bất tỉnh sau khi nóng: cấp cứu ngay.</p><ol><li>Gọi 115 và đưa người bệnh ra chỗ mát.</li><li>Cởi bớt quần áo ngoài, làm mát nhanh bằng nước mát, khăn ướt và quạt; có thể chườm lạnh ở cổ, nách, bẹn.</li><li>Nếu đã được huấn luyện và điều kiện phù hợp, ngâm nước mát có thể làm mát nhanh nhưng cần bảo đảm đường thở.</li><li>Không cho uống nếu lú lẫn, co giật hoặc bất tỉnh. Không để người bệnh một mình.</li></ol></div></details>
-    <details class="aid" data-terms="dị ứng phản vệ khó thở sưng mặt"><summary><span class="iconbox">⚠️</span> Phản vệ / dị ứng nặng</summary><div class="aid-body"><p class="danger">Khó thở, sưng lưỡi/họng, choáng hoặc ngất sau tiếp xúc tác nhân: gọi 115.</p><ol><li>Nếu người bệnh có bút adrenaline tự tiêm được kê cho họ, hỗ trợ dùng ngay theo hướng dẫn trên bút/kế hoạch điều trị.</li><li>Cho nằm phẳng; nếu khó thở có thể ngồi tựa với chân duỗi. Không để đứng dậy hoặc đi lại.</li><li>Nếu không cải thiện sau khoảng 5 phút và có bút thứ hai theo kế hoạch, dùng bút thứ hai.</li><li>Nếu bất tỉnh và không thở bình thường, bắt đầu hồi sức. Thuốc kháng histamine không thay thế adrenaline trong phản vệ.</li></ol></div></details>
-    <details class="aid" data-terms="rắn cắn rắn độc nọc độc"><summary><span class="iconbox">🐍</span> Bị rắn cắn</summary><div class="aid-body"><ol><li>Đưa người bị cắn ra xa con rắn; không cố bắt hoặc giết rắn.</li><li>Gọi cấp cứu hoặc đưa đến cơ sở y tế khẩn cấp. Hạn chế tối đa vận động, giữ bình tĩnh.</li><li>Bất động chi bị cắn bằng nẹp lỏng nếu có; tháo nhẫn/vòng trước khi sưng.</li><li>Không rạch, hút nọc, chườm đá, đắp lá/thuốc, dùng điện hoặc garô chặt.</li><li>Nếu an toàn, ghi nhớ hình dáng/màu sắc từ xa hoặc chụp ảnh mà không tiếp cận con rắn.</li></ol></div></details>
-    <details class="aid" data-terms="co giật động kinh lên cơn"><summary><span class="iconbox">🧠</span> Co giật</summary><div class="aid-body"><ol><li>Dọn vật cứng/nguy hiểm xung quanh, kê vật mềm dưới đầu và canh thời gian cơn co giật.</li><li>Không ghì giữ, không nhét bất cứ thứ gì vào miệng, không cho uống thuốc/nước trong cơn.</li><li>Khi cơn dừng, kiểm tra thở. Nếu còn thở bình thường, đặt nằm nghiêng khi có thể làm an toàn và theo dõi.</li><li>Gọi cấp cứu nếu cơn kéo dài 5 phút trở lên, cơn lặp lại không tỉnh giữa các cơn, lần đầu co giật, bị thương, đang mang thai, xảy ra trong nước hoặc khó thở sau cơn.</li></ol></div></details>
-    <details class="aid" data-terms="khói ngạt khí độc khó thở"><summary><span class="iconbox">💨</span> Hít khói / khó thở</summary><div class="aid-body"><ol><li>Không đi vào khu vực có khói/khí độc nếu chưa được lực lượng chuyên môn bảo đảm an toàn.</li><li>Di chuyển đến không khí trong lành nếu có thể làm an toàn và gọi 114/115 tùy tình huống.</li><li>Nới lỏng quần áo chật, giúp người bệnh nghỉ ở tư thế dễ thở. Không cho ăn uống nếu khó thở nặng hoặc lơ mơ.</li><li>Nếu không thở bình thường, gọi 115 và bắt đầu hồi sức nếu hiện trường an toàn.</li></ol><p>Khó thở, khàn tiếng, bỏng quanh mặt hoặc lú lẫn sau hít khói cần đánh giá cấp cứu ngay, kể cả khi lúc đầu thấy đỡ.</p></div></details>
-  </div>
-</div>
-</section>
+    <section class="grid">
+      <article class="card sos-card">
+        <div class="card-icon" aria-hidden="true">🆘</div>
+        <h2 data-i18n="needHelp">Bạn cần trợ giúp?</h2>
+        <p data-i18n="sosDesc">
+          Tạo tin nhắn SOS có vị trí của bạn và chọn cách liên hệ hỗ trợ.
+        </p>
+        <button class="sos-button" id="sosButton" type="button">
+          <span>🆘</span>
+          <span data-i18n="sosButton">SOS EMERGENCY</span>
+        </button>
+        <p class="sos-note small" data-i18n="sosNote">
+          SOS không tự động gửi tin nhắn hoặc gọi cứu hộ. Bạn cần xác nhận
+          thao tác trên thiết bị.
+        </p>
+      </article>
 
-<section class="section">
-<div class="wrap">
-  <div class="card">
-    <h2 style="font-size:1.35rem">Trước khi khởi hành</h2>
-    <div class="grid">
-      <div>☑️ Lưu số hướng dẫn viên và người thân.</div><div>☑️ Sạc pin điện thoại và bật định vị.</div><div>☑️ Chia sẻ lịch trình với người tin cậy.</div><div>☑️ Mang thuốc cá nhân và bộ sơ cứu.</div><div>☑️ Biết số khẩn cấp tại điểm đến.</div><div>☑️ Ở cùng nhóm tại khu vực rủi ro.</div>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">📍</div>
+        <h2 data-i18n="gpsTitle">Vị trí GPS</h2>
+        <p data-i18n="gpsDesc">
+          Lấy tọa độ hiện tại để hỗ trợ xác định vị trí.
+        </p>
+
+        <div class="gps-value" id="gpsResult" aria-live="polite">
+          <span class="empty" data-i18n="gpsWaiting">
+            Chưa lấy vị trí. Nhấn nút bên dưới để bắt đầu.
+          </span>
+        </div>
+
+        <div class="button-row">
+          <button class="button primary" id="gpsButton" type="button"
+            data-i18n="getGPS">📡 Lấy GPS</button>
+          <button class="button" id="mapButton" type="button"
+            data-i18n="openMap">🗺️ Mở bản đồ</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">📤</div>
+        <h2 data-i18n="shareTitle">Chia sẻ vị trí</h2>
+        <p data-i18n="shareDesc">
+          Gửi tọa độ hoặc liên kết bản đồ cho người thân, hướng dẫn viên.
+        </p>
+
+        <div class="button-row">
+          <button class="button primary" id="shareButton" type="button"
+            data-i18n="shareLocation">📤 Chia sẻ</button>
+          <button class="button" id="copyButton" type="button"
+            data-i18n="copyCoordinates">📋 Sao chép</button>
+        </div>
+
+        <p class="small" style="margin-top:12px" data-i18n="sharePrivacy">
+          Vị trí chỉ được chia sẻ khi bạn chủ động thực hiện thao tác.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">👤</div>
+        <h2 data-i18n="contactTitle">Liên hệ hướng dẫn viên</h2>
+        <p data-i18n="contactDesc">
+          Lưu thông tin hướng dẫn viên hoặc điều hành tour trên thiết bị này.
+        </p>
+
+        <div class="field">
+          <label for="guideName" data-i18n="nameLabel">Tên liên hệ</label>
+          <input id="guideName" type="text" maxlength="100"
+            autocomplete="name" data-i18n-placeholder="namePlaceholder"
+            placeholder="Tên hướng dẫn viên">
+        </div>
+
+        <div class="field">
+          <label for="guidePhone" data-i18n="phoneLabel">Số điện thoại</label>
+          <input id="guidePhone" type="tel" maxlength="30"
+            autocomplete="tel" inputmode="tel"
+            data-i18n-placeholder="phonePlaceholder"
+            placeholder="+84...">
+        </div>
+
+        <div class="button-row">
+          <button class="button primary" id="saveContactButton" type="button"
+            data-i18n="saveContact">💾 Lưu liên hệ</button>
+          <button class="button" id="callGuideButton" type="button"
+            data-i18n="callGuide">📞 Gọi</button>
+        </div>
+
+        <div class="button-row">
+          <button class="button" id="smsGuideButton" type="button"
+            data-i18n="smsGuide">💬 Nhắn tin</button>
+        </div>
+
+        <p class="small" style="margin-top:12px" data-i18n="localStorageNote">
+          Thông tin được lưu trên trình duyệt của thiết bị.
+        </p>
+      </article>
+
+      <article class="card" style="grid-column:1/-1">
+        <div class="card-icon" aria-hidden="true">🩹</div>
+        <h2 data-i18n="firstAidTitle">Hướng dẫn sơ cứu</h2>
+        <p data-i18n="firstAidDesc">
+          Tham khảo các bước xử lý ban đầu trong một số tình huống khẩn cấp.
+        </p>
+
+        <div class="emergency-list">
+          <details>
+            <summary data-i18n="aidBleedingTitle">🩸 Chảy máu nghiêm trọng</summary>
+            <div class="first-aid-content" data-i18n="aidBleedingText">
+              <ol>
+                <li>Gọi dịch vụ cấp cứu tại địa phương nếu chảy máu nhiều.</li>
+                <li>Dùng gạc hoặc vải sạch ép trực tiếp, liên tục lên vết thương.</li>
+                <li>Nếu máu thấm qua, đặt thêm lớp gạc lên trên, không bóc lớp đầu.</li>
+                <li>Không tự rút dị vật cắm sâu trong vết thương.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary data-i18n="aidBurnTitle">🔥 Bỏng nhiệt</summary>
+            <div class="first-aid-content" data-i18n="aidBurnText">
+              <ol>
+                <li>Làm mát vùng bỏng dưới vòi nước mát đang chảy trong 20 phút.</li>
+                <li>Tháo trang sức hoặc quần áo gần vùng bỏng nếu không dính vào da.</li>
+                <li>Không dùng đá, kem đánh răng, bơ hoặc dầu lên vết bỏng.</li>
+                <li>Che nhẹ bằng vật liệu sạch không dính; tìm trợ giúp y tế khi bỏng nặng.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary data-i18n="aidChokingTitle">🫁 Nghẹn đường thở</summary>
+            <div class="first-aid-content" data-i18n="aidChokingText">
+              <ol>
+                <li>Nếu người bệnh còn ho hiệu quả, khuyến khích tiếp tục ho.</li>
+                <li>Nếu không thể nói, ho hoặc thở, gọi cấp cứu và làm theo hướng dẫn của tổng đài.</li>
+                <li>Với người lớn và trẻ trên 1 tuổi bị nghẹn nặng, thực hiện 5 cú vỗ lưng xen kẽ 5 lần ép bụng nếu được đào tạo.</li>
+                <li>Nếu người bệnh bất tỉnh, bắt đầu CPR theo hướng dẫn của tổng đài. Không móc miệng mù bằng ngón tay.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary data-i18n="aidUnconsciousTitle">❤️ Bất tỉnh, không thở bình thường</summary>
+            <div class="first-aid-content" data-i18n="aidUnconsciousText">
+              <ol>
+                <li>Đảm bảo khu vực an toàn và kiểm tra phản ứng.</li>
+                <li>Gọi cấp cứu địa phương, bật loa ngoài và nhờ người lấy AED nếu có.</li>
+                <li>Nếu người lớn bất tỉnh và không thở bình thường, bắt đầu ép tim giữa ngực với tốc độ 100–120 lần/phút, sâu khoảng 5–6 cm.</li>
+                <li>Dùng AED ngay khi có và làm theo hướng dẫn bằng giọng nói. Nếu chưa được huấn luyện, làm theo hướng dẫn của tổng đài.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details>
+            <summary data-i18n="aidHeatTitle">☀️ Sốc nhiệt</summary>
+            <div class="first-aid-content" data-i18n="aidHeatText">
+              <ol>
+                <li>Lú lẫn, co giật hoặc bất tỉnh trong môi trường nóng là dấu hiệu nguy hiểm: gọi cấp cứu ngay.</li>
+                <li>Đưa người bệnh ra khỏi nơi nóng và bắt đầu làm mát nhanh bằng nước mát, khăn ướt hoặc quạt.</li>
+                <li>Không cho uống nếu người bệnh lú lẫn, co giật hoặc bất tỉnh.</li>
+                <li>Tiếp tục làm mát trong khi chờ cấp cứu.</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+
+        <div class="notice" data-i18n="medicalNotice">
+          ⚠️ Đây là hướng dẫn tham khảo, không thay thế đào tạo sơ cứu hoặc tư vấn y tế. Trong trường hợp nguy hiểm đến tính mạng, hãy liên hệ dịch vụ cấp cứu địa phương ngay.
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>SMART TRAVEL GUARD</strong> · FUTURE RESCUE<br>
+      <span data-i18n="footerText">
+        Thiết kế hướng đến trải nghiệm du lịch an toàn hơn.
+      </span><br>
+      <span data-i18n="footerPrivacy">
+        Không gửi dữ liệu vị trí đến máy chủ trong phiên bản này.
+      </span>
     </div>
-  </div>
-</div>
-</section>
-</main>
+  </footer>
 
-<footer class="footer"><div class="wrap"><strong>SMART TRAVEL GUARD</strong><p>Công cụ hỗ trợ thông tin an toàn du lịch. Hướng dẫn trên trang chỉ là thông tin sơ cứu cơ bản, không thay thế tư vấn y tế, huấn luyện sơ cứu hay chỉ dẫn của tổng đài khẩn cấp. Số điện thoại và quy trình khẩn cấp có thể khác nhau theo quốc gia.</p><p>Quyền riêng tư: vị trí chỉ được yêu cầu khi bạn bấm nút. Không có máy chủ trong phiên bản tĩnh này; tin nhắn phải do bạn xác nhận gửi.</p></div></footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-<div class="modal-backdrop" id="sosModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal">
-    <h2 id="modalTitle">🆘 Bạn cần hỗ trợ?</h2>
-    <p>Hãy chọn hành động. Nếu nguy hiểm đến tính mạng, gọi cấp cứu ngay.</p>
-    <div class="notice">Nếu bạn đang ở Việt Nam: cấp cứu y tế <strong>115</strong>, cứu hỏa/cứu nạn <strong>114</strong>, công an <strong>113</strong>.</div>
-    <div class="modal-actions"><a class="btn btn-red" href="tel:115">Gọi 115</a><button class="btn btn-light" id="modalGps">📍 Lấy GPS</button><button class="btn btn-light" id="modalShare">Chia sẻ vị trí</button></div>
-    <div class="modal-actions"><button class="btn btn-primary" id="modalSmsGuide">Nhắn hướng dẫn viên</button><button class="btn btn-primary" id="modalSmsRescue">Nhắn cứu hộ</button></div>
-    <div class="modal-actions"><button class="btn btn-light" id="closeModal">Đóng</button></div>
-  </div>
-</div>
-<script>
-"use strict";
-const $ = id => document.getElementById(id);
-let currentPosition = null;
-const defaultMessage = "Tôi cần hỗ trợ. Vui lòng liên hệ lại.";
-function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("show"),3500)}
-function cleanPhone(phone){return (phone||"").trim().replace(/[^\d+]/g,"")}
-function getSettings(){return {guideName:localStorage.getItem("stg_guideName")||"",guidePhone:localStorage.getItem("stg_guidePhone")||"",rescueName:localStorage.getItem("stg_rescueName")||"",rescuePhone:localStorage.getItem("stg_rescuePhone")||""}}
-function loadSettings(){const s=getSettings();$("guideName").value=s.guideName;$("guidePhone").value=s.guidePhone;$("rescueName").value=s.rescueName;$("rescuePhone").value=s.rescuePhone}
-function saveSettings(){localStorage.setItem("stg_guideName",$("guideName").value.trim());localStorage.setItem("stg_guidePhone",$("guidePhone").value.trim());localStorage.setItem("stg_rescueName",$("rescueName").value.trim());localStorage.setItem("stg_rescuePhone",$("rescuePhone").value.trim());toast("Đã lưu cài đặt trên trình duyệt này.")}
-function setGpsStatus(title,detail,ok=false){$("gpsStatus").textContent=title;$("gpsDetail").textContent=detail;$("gpsDot").style.background=ok?"#13b8a6":"#f59e0b"}
-function coordsText(){if(!currentPosition)return "Chưa lấy được vị trí GPS.";const p=currentPosition;return `Vĩ độ: ${p.coords.latitude.toFixed(6)}, kinh độ: ${p.coords.longitude.toFixed(6)} (sai số khoảng ${Math.round(p.coords.accuracy)} m).`}
-function mapUrl(){if(!currentPosition)return "";return `https://www.google.com/maps?q=${currentPosition.coords.latitude},${currentPosition.coords.longitude}`}
-function getGps(){if(!("geolocation" in navigator)){setGpsStatus("Thiết bị không hỗ trợ GPS","Bạn có thể nhập địa chỉ/mốc gần nhất vào phần mô tả.");toast("Trình duyệt không hỗ trợ định vị.");return}
- setGpsStatus("Đang lấy vị trí…","Hãy cho phép truy cập vị trí nếu trình duyệt hỏi.");
- navigator.geolocation.getCurrentPosition(pos=>{currentPosition=pos;setGpsStatus("Đã lấy vị trí GPS",coordsText(),true);$("reportText").value=buildMessage();toast("Đã lấy vị trí. Sai số phụ thuộc tín hiệu GPS.");},err=>{let msg="Không lấy được vị trí.";if(err.code===1)msg="Bạn chưa cấp quyền vị trí. Hãy bật Location trong cài đặt trình duyệt.";if(err.code===2)msg="Không xác định được vị trí. Hãy bật GPS và thử lại.";if(err.code===3)msg="Hết thời gian lấy vị trí. Hãy thử lại.";setGpsStatus("Chưa lấy được vị trí",msg);toast(msg);},{enableHighAccuracy:true,timeout:15000,maximumAge:10000})}
-function buildMessage(){const type=$("incidentType").value;const severity=$("severity").value;const notes=$("incidentNotes").value.trim();let msg=`[SMART TRAVEL GUARD] ${severity.toUpperCase()}\nSự cố: ${type}\n${coordsText()}`;if(currentPosition)msg+=`\nBản đồ: ${mapUrl()}`;if(notes)msg+=`\nMô tả: ${notes}`;msg+="\nVui lòng liên hệ/hỗ trợ tôi.";return msg}
-function prepareReport(){const msg=buildMessage();$("reportText").value=msg;toast("Đã tạo tin nhắn báo sự cố.");return msg}
-function openSms(phone){const msg=prepareReport();const target=cleanPhone(phone);if(!target){toast("Chưa lưu số điện thoại người nhận. Vào mục Thiết lập người hỗ trợ để thêm số.");$("cai-dat").scrollIntoView({behavior:"smooth"});return}window.location.href=`sms:${target}?body=${encodeURIComponent(msg)}`}
-async function copyText(text){try{await navigator.clipboard.writeText(text);toast("Đã sao chép nội dung.");}catch(e){$("reportText").value=text;$("reportText").focus();$("reportText").select();toast("Trình duyệt chặn sao chép tự động. Hãy nhấn Ctrl+C hoặc chọn Sao chép.");}}
-async function shareLocation(){if(!currentPosition){getGps();toast("Đang lấy GPS. Bấm Chia sẻ vị trí lần nữa sau khi có kết quả.");return}const url=mapUrl();const text=`Vị trí của tôi: ${url}\n${coordsText()}`;if(navigator.share){try{await navigator.share({title:"Vị trí cần hỗ trợ",text,url});}catch(e){if(e.name!=="AbortError")copyText(text)}}else{copyText(text)}}
-function openModal(){$("sosModal").classList.add("show")}
-function closeModal(){$("sosModal").classList.remove("show")}
-$("saveSettings").addEventListener("click",saveSettings);
-$("clearSettings").addEventListener("click",()=>{if(confirm("Xóa các số điện thoại đã lưu trên trình duyệt này?")){["guideName","guidePhone","rescueName","rescuePhone"].forEach(k=>localStorage.removeItem("stg_"+k));loadSettings();toast("Đã xóa các số đã lưu.")}});
-$("gpsBtn").addEventListener("click",getGps);$("modalGps").addEventListener("click",getGps);
-$("shareBtn").addEventListener("click",shareLocation);$("modalShare").addEventListener("click",shareLocation);
-$("sosBtn").addEventListener("click",openModal);$("closeModal").addEventListener("click",closeModal);
-$("prepareReport").addEventListener("click",prepareReport);
-$("copyReport").addEventListener("click",()=>copyText($("reportText").value||prepareReport()));
-$("smsGuide").addEventListener("click",()=>openSms(getSettings().guidePhone));
-$("smsRescue").addEventListener("click",()=>openSms(getSettings().rescuePhone));
-$("modalSmsGuide").addEventListener("click",()=>openSms(getSettings().guidePhone));
-$("modalSmsRescue").addEventListener("click",()=>openSms(getSettings().rescuePhone));
-["incidentType","severity","incidentNotes"].forEach(id=>$(id).addEventListener("change",()=>{$("reportText").value=buildMessage()}));
-$("incidentNotes").addEventListener("input",()=>{$("reportText").value=buildMessage()});
-$("aidSearch").addEventListener("input",()=>{const q=$("aidSearch").value.toLocaleLowerCase("vi").trim();document.querySelectorAll(".aid").forEach(card=>{const hay=(card.innerText+" "+card.dataset.terms).toLocaleLowerCase("vi");card.classList.toggle("hidden",!!q&&!hay.includes(q));if(q&&hay.includes(q))card.open=true;})});
-$("sosModal").addEventListener("click",e=>{if(e.target===$("sosModal"))closeModal()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
-loadSettings();
-</script>
+  <script>
+    "use strict";
+
+    const translations = {
+      vi: {
+        systemReady: "HỆ THỐNG AN TOÀN SẴN SÀNG",
+        heroLine1: "Du lịch thông minh.",
+        heroLine2: "Du lịch an toàn.",
+        heroDesc: "Trợ lý an toàn du lịch của bạn. Kết nối trợ giúp, chia sẻ vị trí và tiếp cận hướng dẫn an toàn khi cần.",
+        emergencyCenter: "TRUNG TÂM KHẨN CẤP",
+        needHelp: "Bạn cần trợ giúp?",
+        sosDesc: "Tạo tin nhắn SOS có vị trí của bạn và chọn cách liên hệ hỗ trợ.",
+        sosButton: "SOS KHẨN CẤP",
+        sosNote: "SOS không tự động gửi tin nhắn hoặc gọi cứu hộ. Bạn cần xác nhận thao tác trên thiết bị.",
+        gpsTitle: "Vị trí GPS",
+        gpsDesc: "Lấy tọa độ hiện tại để hỗ trợ xác định vị trí.",
+        gpsWaiting: "Chưa lấy vị trí. Nhấn nút bên dưới để bắt đầu.",
+        getGPS: "📡 Lấy GPS",
+        openMap: "🗺️ Mở bản đồ",
+        shareTitle: "Chia sẻ vị trí",
+        shareDesc: "Gửi tọa độ hoặc liên kết bản đồ cho người thân, hướng dẫn viên.",
+        shareLocation: "📤 Chia sẻ",
+        copyCoordinates: "📋 Sao chép",
+        sharePrivacy: "Vị trí chỉ được chia sẻ khi bạn chủ động thực hiện thao tác.",
+        contactTitle: "Liên hệ hướng dẫn viên",
+        contactDesc: "Lưu thông tin hướng dẫn viên hoặc điều hành tour trên thiết bị này.",
+        nameLabel: "Tên liên hệ",
+        namePlaceholder: "Tên hướng dẫn viên",
+        phoneLabel: "Số điện thoại",
+        phonePlaceholder: "+84...",
+        saveContact: "💾 Lưu liên hệ",
+        callGuide: "📞 Gọi",
+        smsGuide: "💬 Nhắn tin",
+        localStorageNote: "Thông tin được lưu trên trình duyệt của thiết bị.",
+        firstAidTitle: "Hướng dẫn sơ cứu",
+        firstAidDesc: "Tham khảo các bước xử lý ban đầu trong một số tình huống khẩn cấp.",
+        aidBleedingTitle: "🩸 Chảy máu nghiêm trọng",
+        aidBleedingText: "<ol><li>Gọi dịch vụ cấp cứu tại địa phương nếu chảy máu nhiều.</li><li>Dùng gạc hoặc vải sạch ép trực tiếp, liên tục lên vết thương.</li><li>Nếu máu thấm qua, đặt thêm lớp gạc lên trên, không bóc lớp đầu.</li><li>Không tự rút dị vật cắm sâu trong vết thương.</li></ol>",
+        aidBurnTitle: "🔥 Bỏng nhiệt",
+        aidBurnText: "<ol><li>Làm mát vùng bỏng dưới vòi nước mát đang chảy trong 20 phút.</li><li>Tháo trang sức hoặc quần áo gần vùng bỏng nếu không dính vào da.</li><li>Không dùng đá, kem đánh răng, bơ hoặc dầu lên vết bỏng.</li><li>Che nhẹ bằng vật liệu sạch không dính; tìm trợ giúp y tế khi bỏng nặng.</li></ol>",
+        aidChokingTitle: "🫁 Nghẹn đường thở",
+        aidChokingText: "<ol><li>Nếu người bệnh còn ho hiệu quả, khuyến khích tiếp tục ho.</li><li>Nếu không thể nói, ho hoặc thở, gọi cấp cứu và làm theo hướng dẫn của tổng đài.</li><li>Với người lớn và trẻ trên 1 tuổi bị nghẹn nặng, thực hiện 5 cú vỗ lưng xen kẽ 5 lần ép bụng nếu được đào tạo.</li><li>Nếu người bệnh bất tỉnh, bắt đầu CPR theo hướng dẫn của tổng đài. Không móc miệng mù bằng ngón tay.</li></ol>",
+        aidUnconsciousTitle: "❤️ Bất tỉnh, không thở bình thường",
+        aidUnconsciousText: "<ol><li>Đảm bảo khu vực an toàn và kiểm tra phản ứng.</li><li>Gọi cấp cứu địa phương, bật loa ngoài và nhờ người lấy AED nếu có.</li><li>Nếu người lớn bất tỉnh và không thở bình thường, bắt đầu ép tim giữa ngực với tốc độ 100–120 lần/phút, sâu khoảng 5–6 cm.</li><li>Dùng AED ngay khi có và làm theo hướng dẫn bằng giọng nói. Nếu chưa được huấn luyện, làm theo hướng dẫn của tổng đài.</li></ol>",
+        aidHeatTitle: "☀️ Sốc nhiệt",
+        aidHeatText: "<ol><li>Lú lẫn, co giật hoặc bất tỉnh trong môi trường nóng là dấu hiệu nguy hiểm: gọi cấp cứu ngay.</li><li>Đưa người bệnh ra khỏi nơi nóng và bắt đầu làm mát nhanh bằng nước mát, khăn ướt hoặc quạt.</li><li>Không cho uống nếu người bệnh lú lẫn, co giật hoặc bất tỉnh.</li><li>Tiếp tục làm mát trong khi chờ cấp cứu.</li></ol>",
+        medicalNotice: "⚠️ Đây là hướng dẫn tham khảo, không thay thế đào tạo sơ cứu hoặc tư vấn y tế. Trong trường hợp nguy hiểm đến tính mạng, hãy liên hệ dịch vụ cấp cứu địa phương ngay.",
+        footerText: "Thiết kế hướng đến trải nghiệm du lịch an toàn hơn.",
+        footerPrivacy: "Không gửi dữ liệu vị trí đến máy chủ trong phiên bản này.",
+        gpsLoading: "Đang xác định vị trí...",
+        gpsSuccess: "Vị trí hiện tại",
+        gpsError: "Không thể lấy vị trí. Hãy kiểm tra quyền GPS và HTTPS.",
+        gpsUnsupported: "Trình duyệt này không hỗ trợ GPS.",
+        needGPS: "Hãy lấy vị trí GPS trước.",
+        copied: "Đã sao chép thông tin vị trí.",
+        copyFailed: "Không thể sao chép tự động. Hãy thử chia sẻ vị trí.",
+        contactSaved: "Đã lưu thông tin liên hệ.",
+        contactMissing: "Hãy nhập số điện thoại hợp lệ.",
+        phoneMissing: "Hãy lưu số điện thoại hướng dẫn viên trước.",
+        noSMS: "Thiết bị có thể không hỗ trợ mở ứng dụng nhắn tin.",
+        sosConfirm: "Bạn muốn tạo tin nhắn SOS? Ứng dụng sẽ chuẩn bị nội dung; bạn vẫn cần xác nhận gửi hoặc gọi trên thiết bị.",
+        sosMessage: "SOS KHẨN CẤP! Tôi cần trợ giúp. Vị trí của tôi: ",
+        sosNoGPS: "Chưa có vị trí GPS. Bạn vẫn có thể tiếp tục, nhưng tin nhắn sẽ không có tọa độ.",
+        chooseSOS: "Chọn cách liên hệ:",
+        sendSMS: "OK = mở SMS",
+        callEmergency: "Hủy = xem số hướng dẫn viên",
+        themeLight: "Chuyển sang giao diện sáng",
+        themeDark: "Chuyển sang giao diện tối",
+        noGuide: "Chưa lưu số hướng dẫn viên.",
+        locationDenied: "Quyền truy cập vị trí bị từ chối. Hãy bật quyền vị trí trong cài đặt trình duyệt.",
+        locationTimeout: "Hết thời gian chờ GPS. Hãy thử lại ở nơi thoáng.",
+        locationUnavailable: "Không thể xác định vị trí hiện tại.",
+        locationGeneric: "Đã xảy ra lỗi khi lấy vị trí.",
+        copiedGuide: "Đã sao chép tọa độ và liên kết bản đồ.",
+        savedEmpty: "Đã lưu thông tin liên hệ."
+      },
+
+      en: {
+        systemReady: "SAFETY SYSTEM READY",
+        heroLine1: "Travel smarter.",
+        heroLine2: "Travel safer.",
+        heroDesc: "Your travel safety companion. Connect with help, share your location and access emergency guidance when needed.",
+        emergencyCenter: "EMERGENCY CENTER",
+        needHelp: "Need assistance?",
+        sosDesc: "Prepare an SOS message with your location and choose how to contact someone.",
+        sosButton: "SOS EMERGENCY",
+        sosNote: "SOS does not automatically send messages or call emergency services. You must confirm actions on your device.",
+        gpsTitle: "GPS Location",
+        gpsDesc: "Get your current coordinates to help identify your location.",
+        gpsWaiting: "No location yet. Tap the button below to begin.",
+        getGPS: "📡 Get GPS",
+        openMap: "🗺️ Open Map",
+        shareTitle: "Share Location",
+        shareDesc: "Send your coordinates or map link to family or your tour guide.",
+        shareLocation: "📤 Share",
+        copyCoordinates: "📋 Copy",
+        sharePrivacy: "Your location is shared only when you choose to do so.",
+        contactTitle: "Tour Guide Contact",
+        contactDesc: "Save your tour guide or tour operator's contact on this device.",
+        nameLabel: "Contact name",
+        namePlaceholder: "Tour guide name",
+        phoneLabel: "Phone number",
+        phonePlaceholder: "+1...",
+        saveContact: "💾 Save Contact",
+        callGuide: "📞 Call",
+        smsGuide: "💬 Message",
+        localStorageNote: "Contact information is saved in this browser.",
+        firstAidTitle: "First Aid Guide",
+        firstAidDesc: "Basic guidance for responding to selected emergencies.",
+        aidBleedingTitle: "🩸 Severe bleeding",
+        aidBleedingText: "<ol><li>Call local emergency services for severe bleeding.</li><li>Apply firm, continuous pressure with clean gauze or cloth.</li><li>If blood soaks through, add more material on top without removing the first layer.</li><li>Do not remove deeply embedded objects.</li></ol>",
+        aidBurnTitle: "🔥 Thermal burns",
+        aidBurnText: "<ol><li>Cool the burn under cool running water for 20 minutes.</li><li>Remove nearby jewelry or clothing unless stuck to the skin.</li><li>Do not apply ice, toothpaste, butter or oil.</li><li>Cover loosely with a clean, non-stick dressing and seek medical help for serious burns.</li></ol>",
+        aidChokingTitle: "🫁 Choking",
+        aidChokingText: "<ol><li>If the person can cough effectively, encourage them to keep coughing.</li><li>If they cannot speak, cough or breathe, call emergency services and follow the dispatcher's instructions.</li><li>For severe choking in adults and children over 1 year, give 5 back blows alternating with 5 abdominal thrusts if trained.</li><li>If they become unresponsive, start CPR as directed. Do not blindly sweep the mouth with your fingers.</li></ol>",
+        aidUnconsciousTitle: "❤️ Unresponsive and not breathing normally",
+        aidUnconsciousText: "<ol><li>Make sure the scene is safe and check responsiveness.</li><li>Call emergency services on speakerphone and ask someone to get an AED if available.</li><li>For an unresponsive adult not breathing normally, push hard and fast in the center of the chest at 100–120 compressions per minute, about 5–6 cm deep.</li><li>Use an AED as soon as available and follow its prompts. If untrained, follow the dispatcher.</li></ol>",
+        aidHeatTitle: "☀️ Heatstroke",
+        aidHeatText: "<ol><li>Confusion, seizures or unconsciousness in hot conditions are emergencies. Call for help immediately.</li><li>Move the person out of the heat and cool them rapidly with cool water, wet cloths or a fan.</li><li>Do not give drinks to someone confused, having seizures or unconscious.</li><li>Continue cooling while waiting for emergency help.</li></ol>",
+        medicalNotice: "⚠️ This guide does not replace first-aid training or medical advice. Contact local emergency services immediately for life-threatening situations.",
+        footerText: "Designed to support safer travel experiences.",
+        footerPrivacy: "This version does not send location data to a server.",
+        gpsLoading: "Getting your location...",
+        gpsSuccess: "Current location",
+        gpsError: "Could not get your location. Check GPS permission and HTTPS.",
+        gpsUnsupported: "This browser does not support GPS.",
+        needGPS: "Please get your GPS location first.",
+        copied: "Location information copied.",
+        copyFailed: "Automatic copying failed. Try sharing your location.",
+        contactSaved: "Contact saved.",
+        contactMissing: "Please enter a valid phone number.",
+        phoneMissing: "Save your guide's phone number first.",
+        noSMS: "Your device may not support opening a messaging app.",
+        sosConfirm: "Prepare an SOS message? The message will be drafted; you must still confirm sending or calling on your device.",
+        sosMessage: "EMERGENCY SOS! I need help. My location: ",
+        sosNoGPS: "No GPS location yet. You can continue, but the message will not contain coordinates.",
+        chooseSOS: "Choose a contact method:",
+        sendSMS: "OK = open SMS",
+        callEmergency: "Cancel = guide contact",
+        themeLight: "Switch to light mode",
+        themeDark: "Switch to dark mode",
+        noGuide: "No tour guide number saved.",
+        locationDenied: "Location permission denied. Enable location access in your browser settings.",
+        locationTimeout: "GPS timed out. Try again in an open area.",
+        locationUnavailable: "Current location is unavailable.",
+        locationGeneric: "An error occurred while getting your location.",
+        copiedGuide: "Coordinates and map link copied.",
+        savedEmpty: "Contact saved."
+      },
+
+      zh: {
+        systemReady: "安全系统已就绪",
+        heroLine1: "智慧旅行。",
+        heroLine2: "安全出行。",
+        heroDesc: "您的旅行安全助手。需要时联系帮助、分享位置并查看应急指南。",
+        emergencyCenter: "紧急中心",
+        needHelp: "需要帮助吗？",
+        sosDesc: "准备包含当前位置的 SOS 消息，并选择联系支持的方式。",
+        sosButton: "紧急 SOS",
+        sosNote: "SOS 不会自动发送消息或拨打急救电话。您需要在设备上确认操作。",
+        gpsTitle: "GPS 位置",
+        gpsDesc: "获取当前位置坐标。",
+        gpsWaiting: "尚未获取位置。点击下方按钮开始。",
+        getGPS: "📡 获取 GPS",
+        openMap: "🗺️ 打开地图",
+        shareTitle: "分享位置",
+        shareDesc: "向家人或导游发送坐标或地图链接。",
+        shareLocation: "📤 分享",
+        copyCoordinates: "📋 复制",
+        sharePrivacy: "只有在您主动操作时才会分享位置。",
+        contactTitle: "导游联系方式",
+        contactDesc: "在此设备上保存导游或旅行社联系人。",
+        nameLabel: "联系人姓名",
+        namePlaceholder: "导游姓名",
+        phoneLabel: "电话号码",
+        phonePlaceholder: "+86...",
+        saveContact: "💾 保存联系人",
+        callGuide: "📞 拨打",
+        smsGuide: "💬 发消息",
+        localStorageNote: "联系人信息保存在此浏览器中。",
+        firstAidTitle: "急救指南",
+        firstAidDesc: "了解几种紧急情况的基本处理方法。",
+        aidBleedingTitle: "🩸 严重出血",
+        aidBleedingText: "<ol><li>严重出血时立即联系当地急救服务。</li><li>用干净纱布或布料持续直接按压伤口。</li><li>如果血液渗透，在上面增加材料，不要移除第一层。</li><li>不要拔出深嵌入的异物。</li></ol>",
+        aidBurnTitle: "🔥 热灼伤",
+        aidBurnText: "<ol><li>用流动凉水冷却烧伤部位20分钟。</li><li>移除附近首饰或衣物，但不要拉扯粘在皮肤上的物品。</li><li>不要涂冰块、牙膏、黄油或油。</li><li>用干净的不粘敷料轻轻覆盖；严重烧伤需就医。</li></ol>",
+        aidChokingTitle: "🫁 窒息",
+        aidChokingText: "<ol><li>如果患者仍能有效咳嗽，鼓励继续咳嗽。</li><li>如果无法说话、咳嗽或呼吸，立即呼叫急救并遵循调度员指导。</li><li>对于成人和1岁以上儿童的严重窒息，受过训练者可交替进行5次背部拍击和5次腹部冲击。</li><li>如果失去反应，按指导开始心肺复苏。不要盲目用手指掏口腔。</li></ol>",
+        aidUnconsciousTitle: "❤️ 无反应且呼吸不正常",
+        aidUnconsciousText: "<ol><li>确保现场安全并检查反应。</li><li>拨打急救电话并打开扬声器；如有可能，请人取来 AED。</li><li>成人无反应且呼吸不正常时，在胸部中央以每分钟100至120次的速度进行胸外按压，深度约5至6厘米。</li><li>尽快使用 AED 并遵循提示；未受训者应听从调度员指导。</li></ol>",
+        aidHeatTitle: "☀️ 中暑",
+        aidHeatText: "<ol><li>高温环境下出现意识混乱、抽搐或昏迷属于紧急情况，立即求助。</li><li>将患者移至阴凉处，用凉水、湿布或风扇快速降温。</li><li>意识混乱、抽搐或昏迷时不要喂水。</li><li>等待急救时继续降温。</li></ol>",
+        medicalNotice: "⚠️ 本指南不能替代急救培训或医疗建议。遇到危及生命的情况，请立即联系当地急救服务。",
+        footerText: "旨在帮助您获得更安全的旅行体验。",
+        footerPrivacy: "此版本不会将位置数据发送到服务器。",
+        gpsLoading: "正在获取位置...",
+        gpsSuccess: "当前位置",
+        gpsError: "无法获取位置。请检查 GPS 权限和 HTTPS。",
+        gpsUnsupported: "此浏览器不支持 GPS。",
+        needGPS: "请先获取 GPS 位置。",
+        copied: "位置已复制。",
+        copyFailed: "无法自动复制，请尝试分享位置。",
+        contactSaved: "联系人已保存。",
+        contactMissing: "请输入有效电话号码。",
+        phoneMissing: "请先保存导游电话号码。",
+        noSMS: "您的设备可能无法打开短信应用。",
+        sosConfirm: "准备 SOS 消息？您仍需在设备上确认发送或拨打电话。",
+        sosMessage: "紧急 SOS！我需要帮助。我的位置：",
+        sosNoGPS: "尚无 GPS 位置。可以继续，但消息不包含坐标。",
+        chooseSOS: "选择联系方式：",
+        sendSMS: "确定 = 打开短信",
+        callEmergency: "取消 = 导游联系人",
+        themeLight: "切换到浅色模式",
+        themeDark: "切换到深色模式",
+        noGuide: "尚未保存导游号码。",
+        locationDenied: "位置权限被拒绝。请在浏览器设置中启用位置访问。",
+        locationTimeout: "GPS 获取超时，请在开阔区域重试。",
+        locationUnavailable: "当前位置不可用。",
+        locationGeneric: "获取位置时发生错误。",
+        copiedGuide: "坐标和地图链接已复制。",
+        savedEmpty: "联系人已保存。"
+      },
+
+      ja: {
+        systemReady: "安全システム準備完了",
+        heroLine1: "賢く旅しよう。",
+        heroLine2: "安全に旅しよう。",
+        heroDesc: "旅行中の安全をサポート。必要なときに助けを求め、位置情報を共有し、安全ガイドを確認できます。",
+        emergencyCenter: "緊急センター",
+        needHelp: "助けが必要ですか？",
+        sosDesc: "現在地を含む SOS メッセージを準備し、連絡方法を選択します。",
+        sosButton: "緊急 SOS",
+        sosNote: "SOS は自動でメッセージ送信や緊急通報をしません。端末で操作を確認してください。",
+        gpsTitle: "GPS 位置情報",
+        gpsDesc: "現在地の座標を取得します。",
+        gpsWaiting: "位置情報はまだありません。下のボタンを押してください。",
+        getGPS: "📡 GPS 取得",
+        openMap: "🗺️ 地図を開く",
+        shareTitle: "位置情報を共有",
+        shareDesc: "家族やガイドに座標や地図リンクを送ります。",
+        shareLocation: "📤 共有",
+        copyCoordinates: "📋 コピー",
+        sharePrivacy: "位置情報は自分で操作した場合のみ共有されます。",
+        contactTitle: "ツアーガイド連絡先",
+        contactDesc: "ガイドやツアー運営者の連絡先を端末に保存します。",
+        nameLabel: "連絡先名",
+        namePlaceholder: "ガイド名",
+        phoneLabel: "電話番号",
+        phonePlaceholder: "+81...",
+        saveContact: "💾 保存",
+        callGuide: "📞 電話",
+        smsGuide: "💬 メッセージ",
+        localStorageNote: "連絡先はこのブラウザーに保存されます。",
+        firstAidTitle: "応急処置ガイド",
+        firstAidDesc: "緊急時の基本的な対応方法を確認できます。",
+        aidBleedingTitle: "🩸 大量出血",
+        aidBleedingText: "<ol><li>大量出血の場合は地域の救急サービスに連絡します。</li><li>清潔なガーゼや布で傷口を強く押さえ続けます。</li><li>血が染みても最初の布を外さず、その上に追加します。</li><li>深く刺さった異物を抜かないでください。</li></ol>",
+        aidBurnTitle: "🔥 熱傷",
+        aidBurnText: "<ol><li>流水の冷たい水で20分間冷やします。</li><li>皮膚に付着していない近くの装飾品や衣服を外します。</li><li>氷、歯磨き粉、バター、油を塗らないでください。</li><li>清潔な非固着性の覆いを使い、重症なら医療機関を受診します。</li></ol>",
+        aidChokingTitle: "🫁 窒息",
+        aidChokingText: "<ol><li>効果的に咳ができる場合は、咳を続けるよう促します。</li><li>話す、咳をする、呼吸することができなければ救急に連絡し、指示に従います。</li><li>成人と1歳超の子どもの重度の窒息では、訓練を受けた人が背部叩打5回と腹部突き上げ5回を交互に行います。</li><li>反応がなくなったら指示に従い CPR を開始します。口の中を盲目的に指で探らないでください。</li></ol>",
+        aidUnconsciousTitle: "❤️ 反応がなく正常な呼吸がない",
+        aidUnconsciousText: "<ol><li>周囲の安全を確認し、反応を確認します。</li><li>救急に通報し、スピーカーにして AED があれば持ってきてもらいます。</li><li>成人が反応せず正常な呼吸がない場合、胸の中央を毎分100～120回、約5～6cmの深さで圧迫します。</li><li>AED が届いたら使用し、音声指示に従います。訓練を受けていない場合は通報先の指示に従います。</li></ol>",
+        aidHeatTitle: "☀️ 熱中症",
+        aidHeatText: "<ol><li>暑い環境で混乱、けいれん、意識消失があれば直ちに救急に連絡します。</li><li>涼しい場所へ移し、冷水、濡れた布、扇風機などで素早く冷却します。</li><li>意識が混乱している、けいれんしている、または意識がない人に飲み物を与えないでください。</li><li>救急を待つ間も冷却を続けます。</li></ol>",
+        medicalNotice: "⚠️ このガイドは救急訓練や医療助言の代わりではありません。命に関わる場合は地域の救急サービスに直ちに連絡してください。",
+        footerText: "より安全な旅行体験をサポートするための設計です。",
+        footerPrivacy: "このバージョンは位置情報をサーバーに送信しません。",
+        gpsLoading: "位置情報を取得中...",
+        gpsSuccess: "現在地",
+        gpsError: "位置情報を取得できません。GPS 権限と HTTPS を確認してください。",
+        gpsUnsupported: "このブラウザーは GPS に対応していません。",
+        needGPS: "先に GPS 位置情報を取得してください。",
+        copied: "位置情報をコピーしました。",
+        copyFailed: "自動コピーできませんでした。共有をお試しください。",
+        contactSaved: "連絡先を保存しました。",
+        contactMissing: "有効な電話番号を入力してください。",
+        phoneMissing: "先にガイドの電話番号を保存してください。",
+        noSMS: "端末でメッセージアプリを開けない場合があります。",
+        sosConfirm: "SOS メッセージを準備しますか？送信や通話は端末で確認する必要があります。",
+        sosMessage: "緊急 SOS！助けが必要です。現在地：",
+        sosNoGPS: "GPS 位置情報がありません。座標なしで続行できます。",
+        chooseSOS: "連絡方法を選択してください：",
+        sendSMS: "OK = SMS を開く",
+        callEmergency: "キャンセル = ガイド連絡先",
+        themeLight: "ライトモードに切り替え",
+        themeDark: "ダークモードに切り替え",
+        noGuide: "ガイドの電話番号が保存されていません。",
+        locationDenied: "位置情報の許可が拒否されました。ブラウザー設定で有効にしてください。",
+        locationTimeout: "GPS がタイムアウトしました。開けた場所で再試行してください。",
+        locationUnavailable: "現在地を取得できません。",
+        locationGeneric: "位置情報の取得中にエラーが発生しました。",
+        copiedGuide: "座標と地図リンクをコピーしました。",
+        savedEmpty: "連絡先を保存しました。"
+      },
+
+      ko: {
+        systemReady: "안전 시스템 준비 완료",
+        heroLine1: "더 스마트하게 여행하세요.",
+        heroLine2: "더 안전하게 여행하세요.",
+        heroDesc: "여행 안전 도우미입니다. 필요할 때 도움을 요청하고 위치를 공유하며 안전 안내를 확인하세요.",
+        emergencyCenter: "긴급 센터",
+        needHelp: "도움이 필요하신가요?",
+        sosDesc: "현재 위치가 포함된 SOS 메시지를 준비하고 연락 방법을 선택하세요.",
+        sosButton: "긴급 SOS",
+        sosNote: "SOS는 메시지나 긴급 전화를 자동으로 보내지 않습니다. 기기에서 직접 확인해야 합니다.",
+        gpsTitle: "GPS 위치",
+        gpsDesc: "현재 좌표를 가져옵니다.",
+        gpsWaiting: "아직 위치가 없습니다. 아래 버튼을 눌러 시작하세요.",
+        getGPS: "📡 GPS 가져오기",
+        openMap: "🗺️ 지도 열기",
+        shareTitle: "위치 공유",
+        shareDesc: "가족이나 가이드에게 좌표 또는 지도 링크를 보내세요.",
+        shareLocation: "📤 공유",
+        copyCoordinates: "📋 복사",
+        sharePrivacy: "위치는 사용자가 직접 공유할 때만 전송됩니다.",
+        contactTitle: "여행 가이드 연락처",
+        contactDesc: "가이드 또는 여행사 담당자의 연락처를 이 기기에 저장하세요.",
+        nameLabel: "연락처 이름",
+        namePlaceholder: "가이드 이름",
+        phoneLabel: "전화번호",
+        phonePlaceholder: "+82...",
+        saveContact: "💾 연락처 저장",
+        callGuide: "📞 전화",
+        smsGuide: "💬 메시지",
+        localStorageNote: "연락처는 이 브라우저에 저장됩니다.",
+        firstAidTitle: "응급처치 안내",
+        firstAidDesc: "일부 응급 상황에서 취할 기본 조치를 확인하세요.",
+        aidBleedingTitle: "🩸 심한 출혈",
+        aidBleedingText: "<ol><li>출혈이 심하면 현지 응급 서비스에 연락하세요.</li><li>깨끗한 거즈나 천으로 상처를 직접 계속 압박하세요.</li><li>피가 스며들면 처음 것을 떼지 말고 위에 더 덧대세요.</li><li>깊이 박힌 물체를 빼지 마세요.</li></ol>",
+        aidBurnTitle: "🔥 화상",
+        aidBurnText: "<ol><li>흐르는 시원한 물로 20분간 식히세요.</li><li>피부에 붙지 않은 주변 장신구나 옷을 제거하세요.</li><li>얼음, 치약, 버터, 기름을 바르지 마세요.</li><li>깨끗하고 달라붙지 않는 재료로 가볍게 덮고 심하면 진료를 받으세요.</li></ol>",
+        aidChokingTitle: "🫁 기도 폐쇄",
+        aidChokingText: "<ol><li>효과적으로 기침할 수 있다면 계속 기침하도록 하세요.</li><li>말하거나 기침하거나 숨을 쉴 수 없다면 응급 서비스에 연락하고 지시에 따르세요.</li><li>성인과 1세 초과 아동의 심한 질식은 교육을 받은 사람이 등 두드리기 5회와 복부 밀어올리기 5회를 번갈아 시행할 수 있습니다.</li><li>반응이 없어지면 안내에 따라 심폐소생술을 시작하세요. 입안을 손가락으로 무작정 훑지 마세요.</li></ol>",
+        aidUnconsciousTitle: "❤️ 반응이 없고 정상적으로 숨 쉬지 않음",
+        aidUnconsciousText: "<ol><li>현장이 안전한지 확인하고 반응을 살피세요.</li><li>응급 서비스에 전화하고 스피커폰을 사용하세요. 가능하면 AED를 가져오도록 요청하세요.</li><li>성인이 반응이 없고 정상적으로 숨 쉬지 않으면 가슴 중앙을 분당 100~120회, 약 5~6cm 깊이로 압박하세요.</li><li>AED가 있으면 즉시 사용하고 안내를 따르세요. 교육을 받지 않았다면 전화 상담원의 지시를 따르세요.</li></ol>",
+        aidHeatTitle: "☀️ 열사병",
+        aidHeatText: "<ol><li>더운 환경에서 혼란, 발작 또는 의식 상실이 나타나면 즉시 응급 서비스에 연락하세요.</li><li>시원한 장소로 옮기고 차가운 물, 젖은 천 또는 선풍기로 빠르게 식히세요.</li><li>혼란스럽거나 발작 중이거나 의식이 없는 사람에게 물을 먹이지 마세요.</li><li>응급 구조대가 올 때까지 계속 식히세요.</li></ol>",
+        medicalNotice: "⚠️ 이 안내는 응급처치 교육이나 의료 조언을 대신하지 않습니다. 생명이 위험한 경우 현지 응급 서비스에 즉시 연락하세요.",
+        footerText: "더 안전한 여행 경험을 지원하도록 설계되었습니다.",
+        footerPrivacy: "이 버전은 위치 데이터를 서버로 보내지 않습니다.",
+        gpsLoading: "위치 확인 중...",
+        gpsSuccess: "현재 위치",
+        gpsError: "위치를 가져올 수 없습니다. GPS 권한과 HTTPS를 확인하세요.",
+        gpsUnsupported: "이 브라우저는 GPS를 지원하지 않습니다.",
+        needGPS: "먼저 GPS 위치를 가져오세요.",
+        copied: "위치 정보를 복사했습니다.",
+        copyFailed: "자동 복사에 실패했습니다. 위치 공유를 시도하세요.",
+        contactSaved: "연락처를 저장했습니다.",
+        contactMissing: "올바른 전화번호를 입력하세요.",
+        phoneMissing: "먼저 가이드 전화번호를 저장하세요.",
+        noSMS: "기기에서 메시지 앱을 열 수 없을 수 있습니다.",
+        sosConfirm: "SOS 메시지를 준비할까요? 전송이나 전화는 기기에서 직접 확인해야 합니다.",
+        sosMessage: "긴급 SOS! 도움이 필요합니다. 현재 위치: ",
+        sosNoGPS: "GPS 위치가 없습니다. 좌표 없이 계속할 수 있습니다.",
+        chooseSOS: "연락 방법을 선택하세요:",
+        sendSMS: "확인 = SMS 열기",
+        callEmergency: "취소 = 가이드 연락처",
+        themeLight: "밝은 모드로 전환",
+        themeDark: "어두운 모드로 전환",
+        noGuide: "저장된 가이드 전화번호가 없습니다.",
+        locationDenied: "위치 권한이 거부되었습니다. 브라우저 설정에서 위치 접근을 허용하세요.",
+        locationTimeout: "GPS 시간이 초과되었습니다. 탁 트인 장소에서 다시 시도하세요.",
+        locationUnavailable: "현재 위치를 사용할 수 없습니다.",
+        locationGeneric: "위치를 가져오는 중 오류가 발생했습니다.",
+        copiedGuide: "좌표와 지도 링크를 복사했습니다.",
+        savedEmpty: "연락처를 저장했습니다."
+      },
+
+      fr: {
+        systemReady: "SYSTÈME DE SÉCURITÉ PRÊT",
+        heroLine1: "Voyagez intelligemment.",
+        heroLine2: "Voyagez en sécurité.",
+        heroDesc: "Votre assistant de sécurité en voyage. Contactez de l'aide, partagez votre position et consultez des conseils d'urgence.",
+        emergencyCenter: "CENTRE D'URGENCE",
+        needHelp: "Besoin d'aide ?",
+        sosDesc: "Préparez un message SOS avec votre position et choisissez un moyen de contacter quelqu'un.",
+        sosButton: "SOS URGENCE",
+        sosNote: "Le SOS n'envoie pas automatiquement de message et n'appelle pas les secours. Vous devez confirmer sur votre appareil.",
+        gpsTitle: "Position GPS",
+        gpsDesc: "Obtenez vos coordonnées actuelles.",
+        gpsWaiting: "Aucune position. Appuyez sur le bouton ci-dessous pour commencer.",
+        getGPS: "📡 Obtenir le GPS",
+        openMap: "🗺️ Ouvrir la carte",
+        shareTitle: "Partager la position",
+        shareDesc: "Envoyez vos coordonnées ou un lien cartographique à vos proches ou au guide.",
+        shareLocation: "📤 Partager",
+        copyCoordinates: "📋 Copier",
+        sharePrivacy: "Votre position est partagée uniquement à votre initiative.",
+        contactTitle: "Contact du guide",
+        contactDesc: "Enregistrez le contact du guide ou de l'organisateur sur cet appareil.",
+        nameLabel: "Nom du contact",
+        namePlaceholder: "Nom du guide",
+        phoneLabel: "Numéro de téléphone",
+        phonePlaceholder: "+33...",
+        saveContact: "💾 Enregistrer",
+        callGuide: "📞 Appeler",
+        smsGuide: "💬 Message",
+        localStorageNote: "Les coordonnées sont enregistrées dans ce navigateur.",
+        firstAidTitle: "Guide de premiers secours",
+        firstAidDesc: "Conseils de base pour certaines situations d'urgence.",
+        aidBleedingTitle: "🩸 Hémorragie grave",
+        aidBleedingText: "<ol><li>Appelez les secours locaux en cas de saignement important.</li><li>Exercez une pression directe et continue avec une compresse ou un tissu propre.</li><li>Si le sang traverse, ajoutez du tissu sans retirer la première couche.</li><li>Ne retirez pas les objets profondément enfoncés.</li></ol>",
+        aidBurnTitle: "🔥 Brûlures thermiques",
+        aidBurnText: "<ol><li>Refroidissez sous l'eau courante fraîche pendant 20 minutes.</li><li>Retirez les bijoux ou vêtements proches, sauf s'ils adhèrent à la peau.</li><li>N'appliquez ni glace, ni dentifrice, ni beurre, ni huile.</li><li>Couvrez légèrement avec un pansement propre non adhérent et consultez en cas de brûlure grave.</li></ol>",
+        aidChokingTitle: "🫁 Étouffement",
+        aidChokingText: "<ol><li>Si la personne tousse efficacement, encouragez-la à continuer.</li><li>Si elle ne peut ni parler, ni tousser, ni respirer, appelez les secours et suivez les instructions.</li><li>Pour un étouffement grave chez l'adulte et l'enfant de plus d'un an, une personne formée peut alterner 5 tapes dans le dos et 5 compressions abdominales.</li><li>En cas de perte de conscience, commencez la RCP selon les instructions. Ne fouillez pas aveuglément la bouche avec les doigts.</li></ol>",
+        aidUnconsciousTitle: "❤️ Inconscient et respiration anormale",
+        aidUnconsciousText: "<ol><li>Vérifiez la sécurité des lieux et la réaction de la personne.</li><li>Appelez les secours en haut-parleur et demandez un DAE si disponible.</li><li>Chez un adulte inconscient qui ne respire pas normalement, comprimez le centre du thorax à 100–120/min, sur environ 5–6 cm.</li><li>Utilisez un DAE dès que possible et suivez ses instructions. Sinon, suivez celles du répartiteur.</li></ol>",
+        aidHeatTitle: "☀️ Coup de chaleur",
+        aidHeatText: "<ol><li>Confusion, convulsions ou perte de conscience par forte chaleur : urgence, appelez immédiatement.</li><li>Déplacez la personne au frais et refroidissez-la rapidement avec de l'eau fraîche, des linges mouillés ou un ventilateur.</li><li>Ne donnez rien à boire si elle est confuse, convulse ou est inconsciente.</li><li>Continuez le refroidissement en attendant les secours.</li></ol>",
+        medicalNotice: "⚠️ Ce guide ne remplace pas une formation aux premiers secours ni un avis médical. En cas de danger vital, contactez immédiatement les services d'urgence locaux.",
+        footerText: "Conçu pour favoriser des voyages plus sûrs.",
+        footerPrivacy: "Cette version n'envoie pas les données de localisation à un serveur.",
+        gpsLoading: "Localisation en cours...",
+        gpsSuccess: "Position actuelle",
+        gpsError: "Impossible d'obtenir la position. Vérifiez l'autorisation GPS et HTTPS.",
+        gpsUnsupported: "Ce navigateur ne prend pas en charge le GPS.",
+        needGPS: "Obtenez d'abord votre position GPS.",
+        copied: "Informations de position copiées.",
+        copyFailed: "Échec de la copie automatique. Essayez de partager la position.",
+        contactSaved: "Contact enregistré.",
+        contactMissing: "Veuillez saisir un numéro valide.",
+        phoneMissing: "Enregistrez d'abord le numéro du guide.",
+        noSMS: "Votre appareil ne peut peut-être pas ouvrir l'application de messagerie.",
+        sosConfirm: "Préparer un message SOS ? Vous devrez confirmer l'envoi ou l'appel sur votre appareil.",
+        sosMessage: "SOS URGENCE ! J'ai besoin d'aide. Ma position : ",
+        sosNoGPS: "Aucune position GPS. Vous pouvez continuer sans coordonnées.",
+        chooseSOS: "Choisissez un moyen de contact :",
+        sendSMS: "OK = ouvrir SMS",
+        callEmergency: "Annuler = contact du guide",
+        themeLight: "Passer au thème clair",
+        themeDark: "Passer au thème sombre",
+        noGuide: "Aucun numéro de guide enregistré.",
+        locationDenied: "Autorisation de localisation refusée. Activez-la dans les paramètres du navigateur.",
+        locationTimeout: "Délai GPS dépassé. Réessayez dans un espace dégagé.",
+        locationUnavailable: "Position actuelle indisponible.",
+        locationGeneric: "Une erreur est survenue lors de la localisation.",
+        copiedGuide: "Coordonnées et lien de carte copiés.",
+        savedEmpty: "Contact enregistré."
+      },
+
+      es: {
+        systemReady: "SISTEMA DE SEGURIDAD LISTO",
+        heroLine1: "Viaja de forma inteligente.",
+        heroLine2: "Viaja con seguridad.",
+        heroDesc: "Tu asistente de seguridad en viajes. Contacta con ayuda, comparte tu ubicación y consulta orientación de emergencia.",
+        emergencyCenter: "CENTRO DE EMERGENCIAS",
+        needHelp: "¿Necesitas ayuda?",
+        sosDesc: "Prepara un mensaje SOS con tu ubicación y elige cómo contactar con alguien.",
+        sosButton: "SOS EMERGENCIA",
+        sosNote: "SOS no envía mensajes ni llama automáticamente a emergencias. Debes confirmar las acciones en tu dispositivo.",
+        gpsTitle: "Ubicación GPS",
+        gpsDesc: "Obtén tus coordenadas actuales.",
+        gpsWaiting: "Todavía no hay ubicación. Pulsa el botón para empezar.",
+        getGPS: "📡 Obtener GPS",
+        openMap: "🗺️ Abrir mapa",
+        shareTitle: "Compartir ubicación",
+        shareDesc: "Envía tus coordenadas o un enlace del mapa a familiares o al guía.",
+        shareLocation: "📤 Compartir",
+        copyCoordinates: "📋 Copiar",
+        sharePrivacy: "La ubicación solo se comparte cuando tú lo decides.",
+        contactTitle: "Contacto del guía",
+        contactDesc: "Guarda el contacto del guía turístico o del operador en este dispositivo.",
+        nameLabel: "Nombre del contacto",
+        namePlaceholder: "Nombre del guía",
+        phoneLabel: "Número de teléfono",
+        phonePlaceholder: "+34...",
+        saveContact: "💾 Guardar contacto",
+        callGuide: "📞 Llamar",
+        smsGuide: "💬 Mensaje",
+        localStorageNote: "El contacto se guarda en este navegador.",
+        firstAidTitle: "Guía de primeros auxilios",
+        firstAidDesc: "Orientación básica para algunas situaciones de emergencia.",
+        aidBleedingTitle: "🩸 Hemorragia grave",
+        aidBleedingText: "<ol><li>Llama a los servicios locales de emergencia si el sangrado es abundante.</li><li>Aplica presión directa y continua con una gasa o tela limpia.</li><li>Si la sangre atraviesa el material, añade otra capa sin retirar la primera.</li><li>No retires objetos profundamente incrustados.</li></ol>",
+        aidBurnTitle: "🔥 Quemaduras térmicas",
+        aidBurnText: "<ol><li>Enfría la quemadura con agua corriente fresca durante 20 minutos.</li><li>Retira joyas o ropa cercana si no está adherida a la piel.</li><li>No apliques hielo, pasta de dientes, mantequilla ni aceite.</li><li>Cubre ligeramente con un apósito limpio que no se adhiera y busca atención médica si es grave.</li></ol>",
+        aidChokingTitle: "🫁 Atragantamiento",
+        aidChokingText: "<ol><li>Si la persona puede toser eficazmente, anímala a seguir tosiendo.</li><li>Si no puede hablar, toser ni respirar, llama a emergencias y sigue las instrucciones.</li><li>En adultos y niños mayores de un año con obstrucción grave, una persona formada puede alternar 5 golpes en la espalda con 5 compresiones abdominales.</li><li>Si pierde el conocimiento, inicia RCP según las instrucciones. No introduzcas los dedos a ciegas en la boca.</li></ol>",
+        aidUnconsciousTitle: "❤️ Inconsciente y sin respiración normal",
+        aidUnconsciousText: "<ol><li>Asegura la zona y comprueba si responde.</li><li>Llama a emergencias con el altavoz activado y pide un DEA si está disponible.</li><li>Si un adulto está inconsciente y no respira normalmente, comprime el centro del pecho a 100–120 por minuto, unos 5–6 cm de profundidad.</li><li>Utiliza un DEA en cuanto esté disponible y sigue sus instrucciones. Si no tienes formación, sigue las instrucciones del operador.</li></ol>",
+        aidHeatTitle: "☀️ Golpe de calor",
+        aidHeatText: "<ol><li>Confusión, convulsiones o pérdida de conocimiento con calor son emergencias. Llama inmediatamente.</li><li>Lleva a la persona a un lugar fresco y enfríala rápidamente con agua, paños húmedos o un ventilador.</li><li>No des bebidas a una persona confusa, con convulsiones o inconsciente.</li><li>Continúa enfriándola mientras llega la ayuda.</li></ol>",
+        medicalNotice: "⚠️ Esta guía no sustituye la formación en primeros auxilios ni el consejo médico. En una situación potencialmente mortal, contacta inmediatamente con los servicios locales de emergencia.",
+        footerText: "Diseñado para ayudar a disfrutar de viajes más seguros.",
+        footerPrivacy: "Esta versión no envía datos de ubicación a ningún servidor.",
+        gpsLoading: "Obteniendo ubicación...",
+        gpsSuccess: "Ubicación actual",
+        gpsError: "No se pudo obtener la ubicación. Comprueba los permisos GPS y HTTPS.",
+        gpsUnsupported: "Este navegador no admite GPS.",
+        needGPS: "Obtén primero tu ubicación GPS.",
+        copied: "Información de ubicación copiada.",
+        copyFailed: "No se pudo copiar automáticamente. Intenta compartir la ubicación.",
+        contactSaved: "Contacto guardado.",
+        contactMissing: "Introduce un número de teléfono válido.",
+        phoneMissing: "Guarda primero el número del guía.",
+        noSMS: "Es posible que tu dispositivo no pueda abrir la aplicación de mensajes.",
+        sosConfirm: "¿Preparar un mensaje SOS? Debes confirmar el envío o la llamada en tu dispositivo.",
+        sosMessage: "¡SOS DE EMERGENCIA! Necesito ayuda. Mi ubicación: ",
+        sosNoGPS: "Todavía no hay ubicación GPS. Puedes continuar sin coordenadas.",
+        chooseSOS: "Elige un método de contacto:",
+        sendSMS: "Aceptar = abrir SMS",
+        callEmergency: "Cancelar = contacto del guía",
+        themeLight: "Cambiar al modo claro",
+        themeDark: "Cambiar al modo oscuro",
+        noGuide: "No hay ningún número del guía guardado.",
+        locationDenied: "Permiso de ubicación denegado. Actívalo en la configuración del navegador.",
+        locationTimeout: "Se agotó el tiempo de GPS. Inténtalo en un lugar abierto.",
+        locationUnavailable: "La ubicación actual no está disponible.",
+        locationGeneric: "Se produjo un error al obtener la ubicación.",
+        copiedGuide: "Coordenadas y enlace del mapa copiados.",
+        savedEmpty: "Contacto guardado."
+      },
+
+      th: {
+        systemReady: "ระบบความปลอดภัยพร้อมใช้งาน",
+        heroLine1: "เดินทางอย่างชาญฉลาด",
+        heroLine2: "เดินทางอย่างปลอดภัย",
+        heroDesc: "ผู้ช่วยด้านความปลอดภัยในการเดินทาง ติดต่อขอความช่วยเหลือ แชร์ตำแหน่ง และดูคำแนะนำฉุกเฉินเมื่อจำเป็น",
+        emergencyCenter: "ศูนย์ฉุกเฉิน",
+        needHelp: "ต้องการความช่วยเหลือหรือไม่?",
+        sosDesc: "เตรียมข้อความ SOS พร้อมตำแหน่งของคุณและเลือกวิธีติดต่อ",
+        sosButton: "SOS ฉุกเฉิน",
+        sosNote: "SOS จะไม่ส่งข้อความหรือโทรฉุกเฉินโดยอัตโนมัติ คุณต้องยืนยันการดำเนินการบนอุปกรณ์",
+        gpsTitle: "ตำแหน่ง GPS",
+        gpsDesc: "รับพิกัดตำแหน่งปัจจุบันของคุณ",
+        gpsWaiting: "ยังไม่มีตำแหน่ง กดปุ่มด้านล่างเพื่อเริ่ม",
+        getGPS: "📡 รับ GPS",
+        openMap: "🗺️ เปิดแผนที่",
+        shareTitle: "แชร์ตำแหน่ง",
+        shareDesc: "ส่งพิกัดหรือลิงก์แผนที่ให้ครอบครัวหรือไกด์",
+        shareLocation: "📤 แชร์",
+        copyCoordinates: "📋 คัดลอก",
+        sharePrivacy: "ตำแหน่งจะถูกแชร์เมื่อคุณเลือกดำเนินการเองเท่านั้น",
+        contactTitle: "ติดต่อไกด์นำเที่ยว",
+        contactDesc: "บันทึกข้อมูลไกด์หรือผู้จัดทัวร์ไว้ในอุปกรณ์นี้",
+        nameLabel: "ชื่อผู้ติดต่อ",
+        namePlaceholder: "ชื่อไกด์",
+        phoneLabel: "หมายเลขโทรศัพท์",
+        phonePlaceholder: "+66...",
+        saveContact: "💾 บันทึกผู้ติดต่อ",
+        callGuide: "📞 โทร",
+        smsGuide: "💬 ส่งข้อความ",
+        localStorageNote: "ข้อมูลติดต่อบันทึกไว้ในเบราว์เซอร์นี้",
+        firstAidTitle: "คู่มือปฐมพยาบาล",
+        firstAidDesc: "คำแนะนำเบื้องต้นสำหรับสถานการณ์ฉุกเฉินบางประเภท",
+        aidBleedingTitle: "🩸 เลือดออกอย่างรุนแรง",
+        aidBleedingText: "<ol><li>โทรขอความช่วยเหลือฉุกเฉินในพื้นที่หากเลือดออกมาก</li><li>ใช้ผ้าก๊อซหรือผ้าสะอาดกดแผลโดยตรงอย่างต่อเนื่อง</li><li>หากเลือดซึมผ่าน ให้เพิ่มผ้าด้านบนโดยไม่เอาชั้นแรกออก</li><li>อย่าดึงวัตถุที่ฝังลึกออกจากแผล</li></ol>",
+        aidBurnTitle: "🔥 แผลไหม้",
+        aidBurnText: "<ol><li>เปิดน้ำเย็นไหลผ่านแผลไหม้เป็นเวลา 20 นาที</li><li>ถอดเครื่องประดับหรือเสื้อผ้าใกล้แผลหากไม่ติดผิวหนัง</li><li>อย่าใช้น้ำแข็ง ยาสีฟัน เนย หรือน้ำมันทาแผล</li><li>ปิดแผลเบา ๆ ด้วยวัสดุสะอาดที่ไม่ติดแผล และพบแพทย์หากรุนแรง</li></ol>",
+        aidChokingTitle: "🫁 การสำลักหรือทางเดินหายใจอุดตัน",
+        aidChokingText: "<ol><li>หากผู้ป่วยไอได้อย่างมีประสิทธิภาพ ให้กระตุ้นให้ไอต่อไป</li><li>หากพูด ไอ หรือหายใจไม่ได้ ให้โทรฉุกเฉินและทำตามคำแนะนำ</li><li>ในผู้ใหญ่และเด็กอายุมากกว่า 1 ปีที่อุดตันรุนแรง ผู้ผ่านการฝึกสามารถตบหลัง 5 ครั้งสลับกับกดท้อง 5 ครั้ง</li><li>หากหมดสติ ให้เริ่ม CPR ตามคำแนะนำ อย่าล้วงปากโดยมองไม่เห็นสิ่งอุดตัน</li></ol>",
+        aidUnconsciousTitle: "❤️ หมดสติและไม่หายใจตามปกติ",
+        aidUnconsciousText: "<ol><li>ตรวจสอบว่าพื้นที่ปลอดภัยและตรวจการตอบสนอง</li><li>โทรฉุกเฉินโดยเปิดลำโพง และขอให้คนอื่นนำ AED มาให้หากมี</li><li>หากผู้ใหญ่หมดสติและไม่หายใจตามปกติ ให้กดหน้าอกตรงกลาง 100–120 ครั้งต่อนาที ลึกประมาณ 5–6 ซม.</li><li>ใช้ AED ทันทีเมื่อมีและทำตามเสียงแนะนำ หากไม่ได้รับการฝึกให้ทำตามคำแนะนำของเจ้าหน้าที่</li></ol>",
+        aidHeatTitle: "☀️ โรคลมแดด",
+        aidHeatText: "<ol><li>สับสน ชัก หรือหมดสติในสภาพอากาศร้อนเป็นเหตุฉุกเฉิน โทรขอความช่วยเหลือทันที</li><li>ย้ายผู้ป่วยไปยังที่เย็นและลดอุณหภูมิอย่างรวดเร็วด้วยน้ำเย็น ผ้าเปียก หรือพัดลม</li><li>ห้ามให้น้ำดื่มแก่ผู้ที่สับสน กำลังชัก หรือหมดสติ</li><li>ทำให้เย็นต่อไประหว่างรอหน่วยฉุกเฉิน</li></ol>",
+        medicalNotice: "⚠️ คู่มือนี้ไม่ทดแทนการฝึกปฐมพยาบาลหรือคำแนะนำทางการแพทย์ หากเป็นอันตรายถึงชีวิต ให้ติดต่อบริการฉุกเฉินในพื้นที่ทันที",
+        footerText: "ออกแบบมาเพื่อสนับสนุนการเดินทางที่ปลอดภัยยิ่งขึ้น",
+        footerPrivacy: "เวอร์ชันนี้ไม่ส่งข้อมูลตำแหน่งไปยังเซิร์ฟเวอร์",
+        gpsLoading: "กำลังค้นหาตำแหน่ง...",
+        gpsSuccess: "ตำแหน่งปัจจุบัน",
+        gpsError: "ไม่สามารถรับตำแหน่งได้ ตรวจสอบสิทธิ์ GPS และ HTTPS",
+        gpsUnsupported: "เบราว์เซอร์นี้ไม่รองรับ GPS",
+        needGPS: "กรุณารับตำแหน่ง GPS ก่อน",
+        copied: "คัดลอกข้อมูลตำแหน่งแล้ว",
+        copyFailed: "คัดลอกอัตโนมัติไม่สำเร็จ ลองแชร์ตำแหน่ง",
+        contactSaved: "บันทึกผู้ติดต่อแล้ว",
+        contactMissing: "กรุณากรอกหมายเลขโทรศัพท์ที่ถูกต้อง",
+        phoneMissing: "กรุณาบันทึกหมายเลขไกด์ก่อน",
+        noSMS: "อุปกรณ์ของคุณอาจไม่สามารถเปิดแอปข้อความได้",
+        sosConfirm: "ต้องการเตรียมข้อความ SOS หรือไม่? คุณต้องยืนยันการส่งหรือโทรบนอุปกรณ์",
+        sosMessage: "SOS ฉุกเฉิน! ฉันต้องการความช่วยเหลือ ตำแหน่งของฉัน: ",
+        sosNoGPS: "ยังไม่มีตำแหน่ง GPS คุณสามารถดำเนินการต่อโดยไม่มีพิกัด",
+        chooseSOS: "เลือกวิธีติดต่อ:",
+        sendSMS: "ตกลง = เปิด SMS",
+        callEmergency: "ยกเลิก = ติดต่อไกด์",
+        themeLight: "เปลี่ยนเป็นโหมดสว่าง",
+        themeDark: "เปลี่ยนเป็นโหมดมืด",
+        noGuide: "ยังไม่ได้บันทึกหมายเลขไกด์",
+        locationDenied: "ถูกปฏิเสธสิทธิ์ตำแหน่ง โปรดเปิดใช้งานในการตั้งค่าเบราว์เซอร์",
+        locationTimeout: "GPS หมดเวลา ลองอีกครั้งในพื้นที่โล่ง",
+        locationUnavailable: "ไม่สามารถระบุตำแหน่งปัจจุบันได้",
+        locationGeneric: "เกิดข้อผิดพลาดขณะรับตำแหน่ง",
+        copiedGuide: "คัดลอกพิกัดและลิงก์แผนที่แล้ว",
+        savedEmpty: "บันทึกผู้ติดต่อแล้ว"
+      }
+    };
+
+    const STORAGE = {
+      language: "stg_language",
+      theme: "stg_theme",
+      contact: "stg_guide_contact"
+    };
+
+    let currentLanguage = "vi";
+    let currentPosition = null;
+    let toastTimer = null;
+
+    const $ = (id) => document.getElementById(id);
+
+    function t(key) {
+      return translations[currentLanguage]?.[key]
+        ?? translations.en[key]
+        ?? key;
+    }
+
+    function safeGet(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch (_) {
+        return null;
+      }
+    }
+
+    function safeSet(key, value) {
+      try {
+        localStorage.setItem(key, value);
+        return true;
+      } catch (_) {
+        showToast("Storage unavailable. Settings may not persist.");
+        return false;
+      }
+    }
+
+    function showToast(message) {
+      const el = $("toast");
+      el.textContent = message;
+      el.classList.add("show");
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        el.classList.remove("show");
+      }, 3200);
+    }
+
+    function applyLanguage(language) {
+      currentLanguage = translations[language] ? language : "en";
+
+      document.documentElement.lang = currentLanguage;
+      $("languageSelect").value = currentLanguage;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        const value = t(key);
+
+        // Only translation strings defined in this file are inserted as HTML.
+        // Input fields and other user-provided values are never inserted here.
+        if (["aidBleedingText", "aidBurnText", "aidChokingText",
+             "aidUnconsciousText", "aidHeatText"].includes(key)) {
+          el.innerHTML = value;
+        } else {
+          el.textContent = value;
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+        el.placeholder = t(el.dataset.i18nPlaceholder);
+      });
+
+      updateThemeButton();
+      safeSet(STORAGE.language, currentLanguage);
+    }
+
+    function applyTheme(theme) {
+      const selected = theme === "light" ? "light" : "dark";
+      document.body.classList.toggle("light", selected === "light");
+
+      const meta = document.querySelector('meta[name="theme-color"]');
+      meta.content = selected === "light" ? "#effbfa" : "#071b20";
+
+      safeSet(STORAGE.theme, selected);
+      updateThemeButton();
+    }
+
+    function updateThemeButton() {
+      const isLight = document.body.classList.contains("light");
+      $("themeButton").textContent = isLight ? "🌙" : "☀️";
+      $("themeButton").title = isLight ? t("themeDark") : t("themeLight");
+      $("themeButton").setAttribute(
+        "aria-label",
+        isLight ? t("themeDark") : t("themeLight")
+      );
+    }
+
+    function formatCoordinates(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      return {
+        lat,
+        lon,
+        accuracy: position.coords.accuracy,
+        mapUrl: "https://www.google.com/maps?q=" +
+          encodeURIComponent(lat + "," + lon),
+        text: lat.toFixed(6) + ", " + lon.toFixed(6)
+      };
+    }
+
+    function renderPosition(position) {
+      currentPosition = position;
+      const c = formatCoordinates(position);
+
+      $("gpsResult").replaceChildren();
+
+      const heading = document.createElement("strong");
+      heading.textContent = t("gpsSuccess");
+      $("gpsResult").appendChild(heading);
+
+      const line = document.createElement("div");
+      line.textContent = c.text;
+      line.style.overflowWrap = "anywhere";
+      $("gpsResult").appendChild(line);
+
+      const accuracy = document.createElement("div");
+      accuracy.textContent =
+        "± " + Math.round(c.accuracy) + " m";
+      accuracy.style.color = "var(--muted)";
+      $("gpsResult").appendChild(accuracy);
+
+      return c;
+    }
+
+    function getGPS() {
+      if (!("geolocation" in navigator)) {
+        showToast(t("gpsUnsupported"));
+        return;
+      }
+
+      $("gpsButton").disabled = true;
+      $("gpsResult").textContent = t("gpsLoading");
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          renderPosition(position);
+          $("gpsButton").disabled = false;
+        },
+        (error) => {
+          $("gpsButton").disabled = false;
+
+          let message = t("locationGeneric");
+
+          if (error.code === 1) message = t("locationDenied");
+          if (error.code === 2) message = t("locationUnavailable");
+          if (error.code === 3) message = t("locationTimeout");
+
+          $("gpsResult").textContent = message;
+          showToast(message);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 15000,
+          maximumAge: 10000
+        }
+      );
+    }
+
+    function getLocationPayload() {
+      if (!currentPosition) return null;
+
+      const c = formatCoordinates(currentPosition);
+      return {
+        coordinates: c.text,
+        mapUrl: c.mapUrl,
+        text: c.text + "\n" + c.mapUrl
+      };
+    }
+
+    function openMap() {
+      const payload = getLocationPayload();
+
+      if (!payload) {
+        showToast(t("needGPS"));
+        return;
+      }
+
+      window.open(payload.mapUrl, "_blank", "noopener,noreferrer");
+    }
+
+    async function copyText(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const area = document.createElement("textarea");
+          area.value = text;
+          area.setAttribute("readonly", "");
+          area.style.position = "fixed";
+          area.style.opacity = "0";
+          document.body.appendChild(area);
+          area.select();
+
+          const success = document.execCommand("copy");
+          area.remove();
+
+          if (!success) throw new Error("Copy failed");
+        }
+
+        showToast(t("copied"));
+      } catch (_) {
+        showToast(t("copyFailed"));
+      }
+    }
+
+    async function shareLocation() {
+      const payload = getLocationPayload();
+
+      if (!payload) {
+        showToast(t("needGPS"));
+        return;
+      }
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: "Smart Travel Guard",
+            text: payload.text,
+            url: payload.mapUrl
+          });
+        } catch (error) {
+          if (error.name !== "AbortError") {
+            await copyText(payload.text);
+          }
+        }
+      } else {
+        await copyText(payload.text);
+      }
+    }
+
+    function normalizePhone(phone) {
+      return phone.trim().replace(/[\s().-]/g, "");
+    }
+
+    function validPhone(phone) {
+      return /^\+?[0-9]{6,20}$/.test(normalizePhone(phone));
+    }
+
+    function saveContact() {
+      const name = $("guideName").value.trim();
+      const phone = normalizePhone($("guidePhone").value);
+
+      if (phone && !validPhone(phone)) {
+        showToast(t("contactMissing"));
+        return;
+      }
+
+      const contact = { name, phone };
+
+      if (!safeSet(STORAGE.contact, JSON.stringify(contact))) {
+        return;
+      }
+
+      showToast(t("contactSaved"));
+    }
+
+    function loadContact() {
+      try {
+        const saved = safeGet(STORAGE.contact);
+        if (!saved) return;
+
+        const contact = JSON.parse(saved);
+
+        $("guideName").value =
+          typeof contact.name === "string" ? contact.name : "";
+
+        $("guidePhone").value =
+          typeof contact.phone === "string" ? contact.phone : "";
+      } catch (_) {
+        $("guideName").value = "";
+        $("guidePhone").value = "";
+      }
+    }
+
+    function getContact() {
+      const phone = normalizePhone($("guidePhone").value);
+
+      if (!validPhone(phone)) {
+        showToast(t("phoneMissing"));
+        return null;
+      }
+
+      return {
+        name: $("guideName").value.trim(),
+        phone
+      };
+    }
+
+    function callGuide() {
+      const contact = getContact();
+      if (!contact) return;
+
+      window.location.href = "tel:" + contact.phone;
+    }
+
+    function smsGuide(message = "") {
+      const contact = getContact();
+      if (!contact) return;
+
+      const url = "sms:" + contact.phone +
+        (message ? "?body=" + encodeURIComponent(message) : "");
+
+      window.location.href = url;
+    }
+
+    function buildSOSMessage() {
+      const payload = getLocationPayload();
+      return t("sosMessage") +
+        (payload ? payload.text : t("sosNoGPS"));
+    }
+
+    function startSOS() {
+      const message = buildSOSMessage();
+      const contact = getContactWithoutWarning();
+
+      let promptText = t("sosConfirm") + "\n\n";
+
+      if (!currentPosition) {
+        promptText += t("sosNoGPS") + "\n\n";
+      }
+
+      promptText += t("chooseSOS") + "\n";
+      promptText += "OK = SMS\n";
+      promptText += contact
+        ? "Cancel = " + contact.phone
+        : t("noGuide");
+
+      const useSMS = window.confirm(promptText);
+
+      if (useSMS) {
+        if (contact) {
+          smsGuide(message);
+        } else {
+          const smsUrl = "sms:?body=" + encodeURIComponent(message);
+          window.location.href = smsUrl;
+        }
+        return;
+      }
+
+      if (contact) {
+        const call = window.confirm(
+          (contact.name || contact.phone) + "\n" +
+          t("chooseSOS") + "\n\n" + t("callEmergency")
+        );
+
+        if (call) {
+          window.location.href = "tel:" + contact.phone;
+        }
+      } else {
+        showToast(t("noGuide"));
+      }
+    }
+
+    function getContactWithoutWarning() {
+      const phone = normalizePhone($("guidePhone").value);
+
+      if (!validPhone(phone)) return null;
+
+      return {
+        name: $("guideName").value.trim(),
+        phone
+      };
+    }
+
+    $("languageSelect").addEventListener("change", (event) => {
+      applyLanguage(event.target.value);
+    });
+
+    $("themeButton").addEventListener("click", () => {
+      const isLight = document.body.classList.contains("light");
+      applyTheme(isLight ? "dark" : "light");
+    });
+
+    $("gpsButton").addEventListener("click", getGPS);
+    $("mapButton").addEventListener("click", openMap);
+    $("shareButton").addEventListener("click", shareLocation);
+
+    $("copyButton").addEventListener("click", () => {
+      const payload = getLocationPayload();
+
+      if (!payload) {
+        showToast(t("needGPS"));
+        return;
+      }
+
+      copyText(payload.text);
+    });
+
+    $("saveContactButton").addEventListener("click", saveContact);
+    $("callGuideButton").addEventListener("click", callGuide);
+    $("smsGuideButton").addEventListener("click", () => smsGuide());
+    $("sosButton").addEventListener("click", startSOS);
+
+    // Initialize saved preferences and contact information.
+    const savedLanguage = safeGet(STORAGE.language) || "vi";
+    const savedTheme = safeGet(STORAGE.theme) || "dark";
+
+    applyLanguage(savedLanguage);
+    applyTheme(savedTheme);
+    loadContact();
+  </script>
 </body>
 </html>
+```
