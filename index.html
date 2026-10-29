@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -1649,15 +1649,78 @@
         (payload ? payload.text : t("sosNoGPS"));
     }
 
-    function startSOS() {
-      const message = buildSOSMessage();
-      const contact = getContactWithoutWarning();
+    
+function startSOS() {
+  const choice = window.prompt(
+    "🆘 SMART TRAVEL GUARD — KHẨN CẤP\n\n" +
+    "Chọn số cần gọi:\n\n" +
+    "1. 112 — Tổng đài khẩn cấp quốc gia\n" +
+    "2. 113 — Công an\n" +
+    "3. 114 — Cứu hỏa, cứu nạn\n" +
+    "4. 115 — Cấp cứu y tế\n" +
+    "5. 111 — Bảo vệ trẻ em\n" +
+    "6. Hướng dẫn viên du lịch\n\n" +
+    "Nhập số từ 1 đến 6:"
+  );
 
-      let promptText = t("sosConfirm") + "\n\n";
+  if (choice === null) return;
 
-      if (!currentPosition) {
-        promptText += t("sosNoGPS") + "\n\n";
-      }
+  const numbers = {
+    "1": "112",
+    "2": "113",
+    "3": "114",
+    "4": "115",
+    "5": "111"
+  };
+
+  if (numbers[choice]) {
+    const number = numbers[choice];
+
+    if (window.confirm(
+      "Bạn muốn gọi số khẩn cấp " + number + "?\n\n" +
+      "Nhấn OK để mở ứng dụng gọi điện."
+    )) {
+      window.location.href = "tel:" + number;
+    }
+    return;
+  }
+
+  if (choice === "6") {
+    const contact = getContactWithoutWarning();
+
+    if (!contact) {
+      showToast("Hãy nhập và lưu số điện thoại hướng dẫn viên trước.");
+      return;
+    }
+
+    const payload = getLocationPayload();
+    const message =
+      "SOS KHẨN CẤP! Tôi cần trợ giúp." +
+      (payload
+        ? "\nVị trí GPS: " + payload.coordinates +
+          "\nBản đồ: " + payload.mapUrl
+        : "\nChưa lấy được vị trí GPS.");
+
+    const action = window.prompt(
+      "Liên hệ hướng dẫn viên:\n" +
+      contact.name + " — " + contact.phone + "\n\n" +
+      "1. Gọi điện\n" +
+      "2. Nhắn SMS kèm vị trí GPS\n\n" +
+      "Nhập 1 hoặc 2:"
+    );
+
+    if (action === "1") {
+      window.location.href = "tel:" + contact.phone;
+    } else if (action === "2") {
+      window.location.href =
+        "sms:" + contact.phone + "?body=" +
+        encodeURIComponent(message);
+    }
+    return;
+  }
+
+  showToast("Vui lòng chọn một mục từ 1 đến 6.");
+}
 
       promptText += t("chooseSOS") + "\n";
       promptText += "OK = SMS\n";
